@@ -49,11 +49,15 @@ class ProfileScreen extends StatelessWidget {
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(horizontal: 5.w),
                     decoration: BoxDecoration(
-                      boxShadow: [BoxShadow(blurRadius: 4,
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 4,
                           spreadRadius: 0,
-                          color: Color(0x39d0d0d0).withValues(alpha: .2))],
+                          color: Color(0x39d0d0d0).withValues(alpha: .2),
+                        ),
+                      ],
                       borderRadius: BorderRadius.circular(15),
-                      gradient: AppColor.profileGradient.withOpacity(.2)
+                      gradient: AppColor.profileGradient.withOpacity(.2),
                     ),
                     child: Column(
                       children: [
