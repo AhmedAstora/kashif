@@ -6,6 +6,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'Helper/SharedPreferance/shared_preferance.dart';
 
+import 'Screens/ProfileScreen/ui/profile_screen.dart';
 import 'Screens/SplashScreen/ui/splash_screen.dart';
 import 'Utilities/MainData/MainData.dart';
 import 'Utilities/Transalation/Translation.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         translations: Messages(),
         // supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
         // locale: Locale(SpHelper.spHelper.getLanguage()! == "ar" ? "ar" : "en"),
-        home: SplashScreen(),
+        home: ProfileScreen(),
       ),
     );
   }
