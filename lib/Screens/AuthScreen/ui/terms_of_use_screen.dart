@@ -8,11 +8,12 @@ import 'package:kashif/Utilities/CustomWidgets/custom_new_botton_login.dart';
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
 import '../../../Utilities/CustomWidgets/back_icon_widget.dart';
+import '../../../Utilities/CustomWidgets/custom_check_box.dart';
 import '../../../Utilities/CustomWidgets/custom_text.dart';
 import '../controller/auth_controller.dart';
 
-class AboutYouSignUpScreen extends StatelessWidget {
-  AboutYouSignUpScreen({super.key});
+class TermsOfUseScreen extends StatelessWidget {
+  TermsOfUseScreen({super.key});
 
   final controller = Get.put(AuthController());
 
@@ -35,7 +36,7 @@ class AboutYouSignUpScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(Images.logo, scale: 8),
-                      SizedBox(height: 6.h),
+                      SizedBox(height: 20.h),
                       Row(
                         children: [
                           BackIconWidget(),
@@ -43,44 +44,38 @@ class AboutYouSignUpScreen extends StatelessWidget {
                           Column(
                             children: [
                               CustomText(
-                                "About you",
+                                "Terms of Use",
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.w600,
                               ),
-                              CustomText("Tell us more about you"),
                             ],
                           ),
                         ],
                       ),
-                      SizedBox(height: 30.h),
-                      CustomListWidget(icon: Images.earth),
-                      SizedBox(height: 15.h),
-                      CustomListWidget(icon: Images.citybuildings),
-                      SizedBox(height: 30.h),
+                      SizedBox(height: 28.h),
+                      CustomText(
+                        'Welcome to Kashif!  These Terms of Use govern your use of app.',
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      SizedBox(height: 22.h),
+                      Row(
+                        children: [
+                          CustomCheckBox(
+                            isTapped: con.isTappedCheckBox,
+                            onTap: con.onTapCheckBox,
+                          ),
+                          SizedBox(width: 4.w),
+                          CustomText('I Agree and  Continue', fontSize: 18.sp),
+                        ],
+                      ),
+                      SizedBox(height: 23.h),
+                      CustomNewButtonLogin(
+                        title: "SIGN UP",
+                        isTapped: con.isTappedNavigationHomePage,
+                        onTap:()=> con.NavigationHomePage(),
+                      ),
                     ],
-                  ),
-
-                  CustomText(
-                    'Interests',
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  CustomText('Tap the spots you enjoy  we’ll match your vibe!'),
-                  SizedBox(
-                    height: 120,
-                    child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      padding: EdgeInsets.zero,
-                      itemCount: 3,
-                      separatorBuilder: (_, i) => const SizedBox(width: 0),
-                      itemBuilder: (_, i) => InterestWidget(),
-                    ),
-                  ),
-                  SizedBox(height: 30.h),
-                  CustomNewButtonLogin(
-                    title: "Next",
-                    isTapped: con.isTappedNavigationTermsOfUse,
-                    onTap:()=> con.NavigationTermsOfUse(),
                   ),
                 ],
               ),

@@ -34,13 +34,13 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 47.h),
                 CustomNewButton(
-                  title: "Login",
+                  title: "Login".toUpperCase(),
                   isTapped: con.isTappedLogin,
                   onTap: () => con.onTapLogin(),
                 ),
                 SizedBox(height: 10.h),
                 CustomNewButton(
-                  title: "Sign Up",
+                  title: "Sign Up".toUpperCase(),
                   isTapped: con.isTappedSignUp,
                   onTap: () => con.onTapSignUp(),
                 ),

@@ -35,4 +35,11 @@ class Images {
   static String bank = '$imagePath/bank.png';
   static String dish = '$imagePath/dish.png';
   static String trees = '$imagePath/trees.png';
+  static String iconcarrier = '$imagePath/icon_carrier.png';
+  static String America = '$imagePath/America.png';
+  static String person = '$imagePath/person.jpg';
+  static String mosque = '$imagePath/mosque.png';
+  static String daemon = '$imagePath/daemon.png';
+  static String awardbadgeprize = '$imagePath/award_badge_prize.png';
+  static String educationalgamelogo = '$imagePath/educational_game_logo.png';
 }

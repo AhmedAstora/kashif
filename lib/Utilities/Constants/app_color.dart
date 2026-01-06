@@ -26,19 +26,40 @@ class AppColor {
   static Color white = Colors.white;
   static Color notifyColor = Colors.black54;
 
-  static getGradient({List<double>? stops,List<Color>? colors}) {
+  static getGradient({List<double>? stops, List<Color>? colors}) {
     return LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
-      colors:colors?? [Color(0xffFE8769), Color(0xff293767)],
-      stops: stops ??[0.1, 0.7],
+      colors: colors ?? [Color(0xffFE8769), Color(0xff293767)],
+      stops: stops ?? [0.1, 0.7],
     );
   }
 
- static  LinearGradient interestGradient =  LinearGradient(
-  begin: Alignment.topCenter,
-  end: Alignment.bottomCenter,
-  colors: [Color(0xff8B9EE0).withValues(alpha: .5),Color(0xff4C567A).withValues(alpha: .5)],
-  stops: [0.53, 1],
+  static getBlueGradient({List<double>? stops, List<Color>? colors}) {
+    return LinearGradient(
+      begin: Alignment.bottomRight,
+      end: Alignment.topLeft,
+      colors: colors ?? [Color(0xff293767), Color(0xff4A5EA3)],
+      stops: stops ?? [0.1, 0.7],
+    );
+  }
+
+  static LinearGradient interestGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(0xff8B9EE0).withValues(alpha: .5),
+      Color(0xff4C567A).withValues(alpha: .5),
+    ],
+    stops: [0.53, 1],
+  );
+  static LinearGradient profileGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Color(0xffE7D6C9).withValues(alpha: .5),
+      Color(0xff8B9EE0).withValues(alpha: .5),
+    ],
+    stops: [0, 1],
   );
 }

@@ -5,7 +5,9 @@ import 'package:kashif/Screens/AuthScreen/ui/forgot_password_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/photo_sign_up_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/sign_up_password_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/sign_up_screen.dart';
+import 'package:kashif/Screens/AuthScreen/ui/terms_of_use_screen.dart';
 
+import '../../HomeScreen/ui/home_screen.dart';
 import '../ui/new_password_screen.dart';
 import '../ui/send_code_screen.dart';
 
@@ -19,6 +21,8 @@ class AuthController extends GetxController{
   bool isTappedNavigationAddName = false;
   bool isTappedNavigationPhotoSignUp = false;
   bool isTappedNavigationAboutYouSignUp = false;
+  bool isTappedNavigationTermsOfUse = false;
+  bool isTappedNavigationHomePage = false;
 
   onTapForgotPassword() {
     isTappedForgotPassword = true;
@@ -71,6 +75,18 @@ class AuthController extends GetxController{
 
     update();
     Get.to(()=>AboutYouSignUpScreen());
+  }
+  NavigationTermsOfUse() {
+    isTappedNavigationTermsOfUse = true;
+
+    update();
+    Get.to(()=>TermsOfUseScreen());
+  }
+  NavigationHomePage() {
+    isTappedNavigationHomePage = true;
+
+    update();
+    Get.to(()=>HomeScreen());
   }
   onTapCheckBox() {
     isTappedCheckBox = true;
