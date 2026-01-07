@@ -23,104 +23,108 @@ class LoginScreen extends StatelessWidget {
       builder: (con) {
         return Scaffold(
           body: Container(
+            height: MediaQuery.of(context).size.height,
+
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               gradient: AppColor.getGradient(stops: [0, 0.27]),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w),
-
-                  child: Column(
-                    children: [
-                      SizedBox(height: 60.h),
-                      Image.asset(Images.logo, scale: 8),
-                      SizedBox(height: 10.h),
-                      Row(
-                        children: [
-                          BackIconWidget(),
-                          SizedBox(width: 60.w),
-                          Column(
-                            children: [
-                              CustomText(
-                                "Welcome Back!",
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.w600,
-                              ),
-                              CustomText("Your next mission awaits"),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 60.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 36.w),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      CustomTextFieldLogin(
-                        icon: Images.user,
-                        hintText: "Email",
-                        borderColor: Color(0xff293767),
-                        controller: TextEditingController(),
-                        borderWidth: 0,
-                        hintColor: Colors.white,
-                        fontSize: 12.sp,
-                      ),
-                      SizedBox(height: 15.h),
-                      CustomTextFieldLogin(
-                        icon: Images.lock,
-                        hintText: "Password",
-                        borderColor: Color(0xff293767),
-                        controller: TextEditingController(),
-                        borderWidth: 0,
-                        hintColor: Colors.white,
-                        fontSize: 12.sp,
-                      ),
-                      SizedBox(height: 20.h),
-                      Row(
-                        children: [
-                          CustomCheckBox(
-                            isTapped: con.isTappedCheckBox,
-                            onTap: con.onTapCheckBox,
-                          ),
-                          SizedBox(width: 10.w),
-                          CustomText("Remember Me", color: Colors.white),
-                          SizedBox(width: 60.w),
-                          InkWell(
-                            onTap:()=> con.NavigationForgotPassword(),
-                            child: CustomText(
-                              "Forgot Password?",
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24.w),
+              
+                    child: Column(
+                      children: [
+                        SizedBox(height: 60.h),
+                        Image.asset(Images.logo, scale: 8),
+                        SizedBox(height: 10.h),
+                        Row(
+                          children: [
+                            BackIconWidget(),
+                            SizedBox(width: 60.w),
+                            Column(
+                              children: [
+                                CustomText(
+                                  "Welcome Back!",
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                CustomText("Your next mission awaits"),
+                              ],
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 20.h),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 60.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 36.w),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        CustomTextFieldLogin(
+                          icon: Images.user,
+                          hintText: "Email",
+                          borderColor: Color(0xff293767),
+                          controller: TextEditingController(),
+                          borderWidth: 0,
+                          hintColor: Colors.white,
+                          fontSize: 12.sp,
+                        ),
+                        SizedBox(height: 15.h),
+                        CustomTextFieldLogin(
+                          icon: Images.lock,
+                          hintText: "Password",
+                          borderColor: Color(0xff293767),
+                          controller: TextEditingController(),
+                          borderWidth: 0,
+                          hintColor: Colors.white,
+                          fontSize: 12.sp,
+                        ),
+                        SizedBox(height: 20.h),
+                        Row(
+                          children: [
+                            CustomCheckBox(
+                              isTapped: con.isTappedCheckBox,
+                              onTap: con.onTapCheckBox,
+                            ),
+                            SizedBox(width: 10.w),
+                            CustomText("Remember Me", color: Colors.white),
+                            SizedBox(width: 60.w),
+                            InkWell(
+                              onTap:()=> con.NavigationForgotPassword(),
+                              child: CustomText(
+                                "Forgot Password?",
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20.h),
+                      ],
+                    ),
+                  ),
+                  CustomNewButtonLogin(
+                    title: "Login".toUpperCase(),
+                    isTapped: con.isTappedForgotPassword,
+                    onTap:()=> con.onTapForgotPassword(),
+                  ),
+                  CustomText('or', fontSize: 16.sp, fontWeight: FontWeight.w600),
+                  SizedBox(height: 10.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(Images.circleapple, scale: 4),
+                      Image.asset(Images.circlegoogle, scale: 4),
                     ],
                   ),
-                ),
-                CustomNewButtonLogin(
-                  title: "Login".toUpperCase(),
-                  isTapped: con.isTappedForgotPassword,
-                  onTap:()=> con.onTapForgotPassword(),
-                ),
-                CustomText('or', fontSize: 16.sp, fontWeight: FontWeight.w600),
-                SizedBox(height: 10.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(Images.circleapple, scale: 4),
-                    Image.asset(Images.circlegoogle, scale: 4),
-                  ],
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );

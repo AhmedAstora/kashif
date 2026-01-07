@@ -25,11 +25,12 @@ class SignUpScreen extends StatelessWidget {
         builder: (con) {
           return Scaffold(
             body: Container(
+              height: MediaQuery.of(context).size.height,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 gradient: AppColor.getGradient(stops: [0, 0.27]),
               ),
-              child: Padding(
+              child: SingleChildScrollView(
                 padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Column(
                   children: [
