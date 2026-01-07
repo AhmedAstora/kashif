@@ -23,80 +23,84 @@ class NewPasswordScreen extends StatelessWidget {
       builder: (con) {
         return Scaffold(
           body: Container(
+            height: MediaQuery.of(context).size.height,
+
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               gradient: AppColor.getGradient(stops: [0, 0.27]),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w),
-
-                  child: Column(
-                    children: [
-                      SizedBox(height: 60.h),
-                      Image.asset(Images.logo, scale: 8),
-
-                      Row(
-                        children: [
-                          BackIconWidget(),
-                          SizedBox(width: 30.w),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 15.h,
-                              ),
-                              CustomText(
-                                "Create New Password",
-                                fontSize: 22.sp,
-                                fontWeight: FontWeight.w600,
-                              ),
-                              CustomText("Choose a strong password you can"),
-                              CustomText("remember."),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24.w),
+              
+                    child: Column(
+                      children: [
+                        SizedBox(height: 60.h),
+                        Image.asset(Images.logo, scale: 8),
+              
+                        Row(
+                          children: [
+                            BackIconWidget(),
+                            SizedBox(width: 30.w),
+                            Column(
+                              children: [
+                                SizedBox(
+                                  height: 15.h,
+                                ),
+                                CustomText(
+                                  "Create New Password",
+                                  fontSize: 22.sp,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                CustomText("Choose a strong password you can"),
+                                CustomText("remember."),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(height: 39.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 36.w),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      CustomTextFieldLogin(
-                        icon: Images.lock,
-                        hintText: "New Password",
-                        borderColor: Color(0xff293767),
-                        controller: TextEditingController(),
-                        borderWidth: 0,
-                        hintColor: Colors.white,
-                        fontSize: 12.sp,
-                      ),
-                      SizedBox(height: 15.h),
-                      CustomTextFieldLogin(
-                        icon: Images.confirmlock,
-                        hintText: "Confirm Password",
-                        borderColor: Color(0xff293767),
-                        controller: TextEditingController(),
-                        borderWidth: 0,
-                        hintColor: Colors.white,
-                        fontSize: 12.sp,
-                      ),
-                      SizedBox(height: 40.h),
-                    ],
+                  SizedBox(height: 39.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 36.w),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        CustomTextFieldLogin(
+                          icon: Images.lock,
+                          hintText: "New Password",
+                          borderColor: Color(0xff293767),
+                          controller: TextEditingController(),
+                          borderWidth: 0,
+                          hintColor: Colors.white,
+                          fontSize: 12.sp,
+                        ),
+                        SizedBox(height: 15.h),
+                        CustomTextFieldLogin(
+                          icon: Images.confirmlock,
+                          hintText: "Confirm Password",
+                          borderColor: Color(0xff293767),
+                          controller: TextEditingController(),
+                          borderWidth: 0,
+                          hintColor: Colors.white,
+                          fontSize: 12.sp,
+                        ),
+                        SizedBox(height: 40.h),
+                      ],
+                    ),
                   ),
-                ),
-                CustomNewButtonLogin(
-                  title: "Update Password",
-                  isTapped: con.isTappedUpdatePassword,
-                  onTap: ()=>con.onTapUpdatePassword(),
-
-                ),
-              ],
+                  CustomNewButtonLogin(
+                    title: "Update Password",
+                    isTapped: con.isTappedUpdatePassword,
+                    onTap: ()=>con.onTapUpdatePassword(),
+              
+                  ),
+                ],
+              ),
             ),
           ),
         );

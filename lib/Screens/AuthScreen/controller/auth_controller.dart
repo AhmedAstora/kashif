@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kashif/Screens/AuthScreen/ui/about_you_sign_up_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/add_name_screen.dart';
@@ -12,6 +13,34 @@ import '../ui/new_password_screen.dart';
 import '../ui/send_code_screen.dart';
 
 class AuthController extends GetxController{
+
+
+  var pinPutController = TextEditingController();
+  bool forceError = false;
+  DateTime endTime = DateTime.now().add(Duration(seconds: 60));
+  bool wrongCode = false;
+  bool isExpire = false;
+  final FocusNode pinPutFocusNode = FocusNode();
+
+  String? codeValidation(String? value) {
+    if (value!.isEmpty) {
+      return "Pin is incorrect".tr;
+    }
+    if (value.length != 4) {
+
+      forceError = true;
+      update();
+      return "Pin is incorrect".tr;
+    }
+
+    final RegExp regexEmoji = RegExp(
+      r'(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])',
+    );
+    if (regexEmoji.hasMatch(value)) {
+      return 'mobile number Contain Emoji'.tr;
+    }
+    return null;
+  }
   bool isTappedForgotPassword = false;
   bool NavigtionForgotPassword = false;
   bool isTappedCheckBox = false;
@@ -43,6 +72,7 @@ class AuthController extends GetxController{
     Get.to(()=>AddNameScreen());
   }
   onTapConfirm(bool isFromLogin) {
+
     if(isFromLogin){
 
     }else {
