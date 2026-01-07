@@ -34,7 +34,12 @@ class HeaderProfileWidget extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 55.r,
-              child: Image.asset(Images.addphoto,),
+              child: ClipOval(
+                child: Image.asset(
+                  Images.person,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             SizedBox(
               height: 10.h,
