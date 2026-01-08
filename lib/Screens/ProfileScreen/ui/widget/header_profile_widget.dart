@@ -33,7 +33,7 @@ class HeaderProfileWidget extends StatelessWidget {
         Column(
           children: [
             CircleAvatar(
-              radius: 55.r,
+              radius: 60.r,
               child: ClipOval(
                 child: Image.asset(
                   Images.person,

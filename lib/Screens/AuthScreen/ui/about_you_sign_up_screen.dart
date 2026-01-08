@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:kashif/Screens/ProfileScreen/ui/widget/drop_down_menu_widget.dart';
 import 'package:kashif/Screens/AuthScreen/ui/widgets/interest_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_list_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_new_botton_login.dart';
@@ -74,7 +75,7 @@ class AboutYouSignUpScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       padding: EdgeInsets.zero,
                       itemCount: 3,
-                      separatorBuilder: (_, i) =>  SizedBox(width: 0),
+                      separatorBuilder: (_, i) => SizedBox(width: 0),
                       itemBuilder: (_, i) => InterestWidget(isSelected: false,),
                     ),
                   ),
@@ -82,7 +83,7 @@ class AboutYouSignUpScreen extends StatelessWidget {
                   CustomNewButtonLogin(
                     title: "Next",
                     isTapped: con.isTappedNavigationTermsOfUse,
-                    onTap:()=> con.NavigationTermsOfUse(),
+                    onTap: () => con.NavigationTermsOfUse(),
                   ),
                 ],
               ),
