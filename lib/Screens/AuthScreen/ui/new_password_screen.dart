@@ -24,8 +24,6 @@ class NewPasswordScreen extends StatelessWidget {
         return Scaffold(
           body: Container(
             height: MediaQuery.of(context).size.height,
-
-            alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               gradient: AppColor.getGradient(stops: [0, 0.27]),
             ),
@@ -35,12 +33,10 @@ class NewPasswordScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24.w),
-              
                     child: Column(
                       children: [
                         SizedBox(height: 60.h),
                         Image.asset(Images.logo, scale: 8),
-              
                         Row(
                           children: [
                             BackIconWidget(),

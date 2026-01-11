@@ -63,11 +63,11 @@ class AppColor {
     stops: [0, 1],
   );
   static LinearGradient dropDwonMenu = LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
+    begin: Alignment.bottomLeft,
+    end: Alignment.topLeft,
     colors: [
-      Color(0xffE7D6C9).withValues(alpha: .3),
-      Color(0xffFE8769).withValues(alpha: .3),
+      Color(0x1ae7d6c9),
+      Color(0x1afe8769),
     ],
     stops: [0, 1],
   );

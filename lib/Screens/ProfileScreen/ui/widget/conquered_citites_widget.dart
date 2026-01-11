@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
-import 'list_city_widget.dart';
+import 'city_widget.dart';
 
 class ConqueredCititesWidget extends StatelessWidget {
   const ConqueredCititesWidget({super.key});
@@ -32,7 +32,7 @@ class ConqueredCititesWidget extends StatelessWidget {
             padding: EdgeInsets.zero,
             itemCount: 5,
             separatorBuilder: (_, i) => SizedBox(width: 20.w),
-            itemBuilder: (_, i) => ListCityWidget(
+            itemBuilder: (_, i) => CityWidget(
               image: Images.mosque,
               title: 'New York',
               radius: 45.r,

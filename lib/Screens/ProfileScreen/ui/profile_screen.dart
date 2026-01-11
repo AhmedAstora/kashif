@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_3d_carousel/flutter_3d_carousel.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/carousel_slider_widget.dart';
+import 'package:kashif/Screens/ProfileScreen/ui/widget/city_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/conquered_cities_lock_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/conquered_citites_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/make_first_victory_widget.dart';
@@ -10,7 +11,6 @@ import 'package:kashif/Screens/ProfileScreen/ui/widget/no_mission_shots_widget.d
 import 'package:kashif/Screens/ProfileScreen/ui/widget/one_city_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/header_profile_widget.dart';
-import 'package:kashif/Screens/ProfileScreen/ui/widget/list_city_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 import 'package:overlapped_carousel/overlapped_carousel.dart';
 
@@ -21,8 +21,8 @@ import '../../../Utilities/CustomWidgets/custom_new_button.dart';
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({
     super.key,
-    this.oneCity = false,
-    this.manyCities = false,
+    this.oneCity = true,
+    this.manyCities = true,
     this.conqueredCities = true,
   });
 
@@ -101,7 +101,7 @@ class ProfileScreen extends StatelessWidget {
                                 itemCount: 5,
                                 separatorBuilder: (_, i) =>
                                     SizedBox(width: 20.w),
-                                itemBuilder: (_, i) => ListCityWidget(
+                                itemBuilder: (_, i) => CityWidget(
                                   image: Images.mosque,
                                   title: 'New York',
                                   radius: 30.r,

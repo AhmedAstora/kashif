@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:kashif/Screens/AuthScreen/ui/widgets/about_you_menu_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/drop_down_menu_widget.dart';
 import 'package:kashif/Screens/AuthScreen/ui/widgets/interest_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_list_widget.dart';
@@ -24,8 +25,6 @@ class AboutYouSignUpScreen extends StatelessWidget {
         return Scaffold(
           body: Container(
             height: MediaQuery.of(context).size.height,
-
-            alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               gradient: AppColor.getGradient(stops: [0, 0.27]),
             ),
@@ -56,9 +55,21 @@ class AboutYouSignUpScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 30.h),
-                      CustomListWidget(icon: Images.earth),
+                      AboutYouMenuWidget(
+                        selectedItem: controller,
+                        icon: Images.earth,
+                        items: [],
+                        onChange: (T) {},
+                        displayText: 'Select your country',
+                      ),
                       SizedBox(height: 15.h),
-                      CustomListWidget(icon: Images.citybuildings),
+                      AboutYouMenuWidget(
+                        selectedItem: controller,
+                        icon: Images.citybuildings,
+                        items: [],
+                        onChange: (T) {},
+                        displayText: 'Select your country',
+                      ),
                       SizedBox(height: 30.h),
                     ],
                   ),
