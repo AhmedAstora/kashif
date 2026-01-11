@@ -101,7 +101,7 @@ class AddNameScreen extends StatelessWidget {
                   CustomNewButtonLogin(
                     title: "Next",
                     isTapped: con.isTappedNavigationPhotoSignUp,
-                    onTap: ()=>con.NavigationPhotoSignUp(),
+                    onTap: ()=>con.navigationPhotoSignUp(),
               
                   ),
                 ],

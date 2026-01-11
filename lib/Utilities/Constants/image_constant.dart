@@ -49,6 +49,7 @@ class Images {
   static String privacypolicy = '$imagePath/privacy_policy.png';
   static String problem = '$imagePath/problem.png';
   static String terms = '$imagePath/terms.png';
+  static String iconimage = '$imagePath/icon_image.png';
   static String headphone = '$imagePath/head_phone.png';
   static String userprofile = '$imagePath/user_profile.png';
   static String bluelock = '$imagePath/blue_lock.png';

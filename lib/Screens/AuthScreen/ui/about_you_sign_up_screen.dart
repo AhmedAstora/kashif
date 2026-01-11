@@ -83,7 +83,7 @@ class AboutYouSignUpScreen extends StatelessWidget {
                   CustomNewButtonLogin(
                     title: "Next",
                     isTapped: con.isTappedNavigationTermsOfUse,
-                    onTap: () => con.NavigationTermsOfUse(),
+                    onTap: () => con.navigationTermsOfUse(),
                   ),
                 ],
               ),

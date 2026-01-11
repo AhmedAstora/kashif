@@ -42,7 +42,7 @@ class AuthController extends GetxController{
     return null;
   }
   bool isTappedForgotPassword = false;
-  bool NavigtionForgotPassword = false;
+  bool isTappedNavigationForgotPassword = false;
   bool isTappedCheckBox = false;
   bool isTappedSendCode = false;
   bool isTappedConfirm = false;
@@ -88,31 +88,31 @@ class AuthController extends GetxController{
 
     update();
   }
-  NavigationForgotPassword() {
-    NavigtionForgotPassword = true;
+  navigationForgotPassword() {
+    isTappedNavigationForgotPassword = true;
 
     update();
     Get.to(()=>ForgotPasswordScreen());
   }
-  NavigationPhotoSignUp() {
+  navigationPhotoSignUp() {
     isTappedNavigationPhotoSignUp = true;
 
     update();
     Get.to(()=>PhotoSignUpScreen());
   }
-  NavigationAboutYouSignUp() {
+  navigationAboutYouSignUp() {
     isTappedNavigationAboutYouSignUp = true;
 
     update();
     Get.to(()=>AboutYouSignUpScreen());
   }
-  NavigationTermsOfUse() {
+  navigationTermsOfUse() {
     isTappedNavigationTermsOfUse = true;
 
     update();
     Get.to(()=>TermsOfUseScreen());
   }
-  NavigationHomePage() {
+  navigationHomePage() {
     isTappedNavigationHomePage = true;
 
     update();

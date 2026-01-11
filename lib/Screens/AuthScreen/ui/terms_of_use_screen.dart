@@ -75,7 +75,7 @@ class TermsOfUseScreen extends StatelessWidget {
                       CustomNewButtonLogin(
                         title: "SIGN UP",
                         isTapped: con.isTappedNavigationHomePage,
-                        onTap:()=> con.NavigationHomePage(),
+                        onTap:()=> con.navigationHomePage(),
                       ),
                     ],
                   ),
