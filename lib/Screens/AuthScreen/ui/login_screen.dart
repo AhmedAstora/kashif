@@ -96,7 +96,7 @@ class LoginScreen extends StatelessWidget {
                             CustomText("Remember Me", color: Colors.white),
                             SizedBox(width: 60.w),
                             InkWell(
-                              onTap:()=> con.NavigationForgotPassword(),
+                              onTap:()=> con.navigationForgotPassword(),
                               child: CustomText(
                                 "Forgot Password?",
                                 fontWeight: FontWeight.w600,

@@ -132,9 +132,13 @@ class _CustomTextFieldState extends State<CustomTextFieldLogin> {
                           )
                         : null,
                     prefixIconConstraints: BoxConstraints(
-                      maxWidth: 45.r,
-                      maxHeight: 20.r,
+
                     ),
+                    suffixIcon: widget.suffixIcon!=null
+                    ?Padding(
+                      padding: EdgeInsets.only(right: 20.w),
+                      child: widget.suffixIcon,
+                    ): null,
                     suffixIconConstraints: BoxConstraints(
                       maxWidth: 60.r,
                       maxHeight: 20.r,

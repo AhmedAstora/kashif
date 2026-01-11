@@ -109,7 +109,7 @@ class PhotoSignUpScreen extends StatelessWidget {
                   CustomNewButtonLogin(
                     title: "Next",
                     isTapped: con.isTappedNavigationAboutYouSignUp,
-                    onTap:()=> con.NavigationAboutYouSignUp(),
+                    onTap:()=> con.navigationAboutYouSignUp(),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

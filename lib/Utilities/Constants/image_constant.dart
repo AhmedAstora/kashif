@@ -40,6 +40,23 @@ class Images {
   static String person = '$imagePath/person.jpg';
   static String mosque = '$imagePath/mosque.png';
   static String daemon = '$imagePath/daemon.png';
+  static String camera = '$imagePath/camera.png';
+  static String search = '$imagePath/search.png';
+  static String change = '$imagePath/change.png';
+  static String logout = '$imagePath/logout.png';
+  static String passport = '$imagePath/passport.png';
+  static String privacy = '$imagePath/privacy.png';
+  static String privacypolicy = '$imagePath/privacy_policy.png';
+  static String problem = '$imagePath/problem.png';
+  static String terms = '$imagePath/terms.png';
+  static String iconimage = '$imagePath/icon_image.png';
+  static String headphone = '$imagePath/head_phone.png';
+  static String userprofile = '$imagePath/user_profile.png';
+  static String bluelock = '$imagePath/blue_lock.png';
+  static String passwordchange = '$imagePath/password_change.png';
+  static String passwordlist = '$imagePath/password_list.png';
+  static String camerafill = '$imagePath/camera_fill.png';
+  static String lockfill = '$imagePath/lock_fill.png';
   static String awardbadgeprize = '$imagePath/award_badge_prize.png';
   static String educationalgamelogo = '$imagePath/educational_game_logo.png';
 }
