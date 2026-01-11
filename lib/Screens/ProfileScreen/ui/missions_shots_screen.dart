@@ -11,7 +11,6 @@ import 'package:kashif/Screens/ProfileScreen/ui/widget/no_mission_shots_widget.d
 import 'package:kashif/Screens/ProfileScreen/ui/widget/one_city_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/header_profile_widget.dart';
-import 'package:kashif/Screens/ProfileScreen/ui/widget/list_city_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 import 'package:overlapped_carousel/overlapped_carousel.dart';
 
@@ -72,7 +71,7 @@ class MissionsShotsScreen extends StatelessWidget {
                       SizedBox(height: 20.h),
                   itemBuilder: (_, i) => MissionsShotsWidget(),
                 ),
-              )
+              ),
 
             ],
           ),

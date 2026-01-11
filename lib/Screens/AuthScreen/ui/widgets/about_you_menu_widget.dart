@@ -7,7 +7,7 @@ import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
 
 
-class DropDownMenuWidget<T> extends StatelessWidget {
+class AboutYouMenuWidget<T> extends StatelessWidget {
   final bool isLoading;
   final T? selectedItem;
   final List<DropdownMenuItem<T>>? items;
@@ -16,7 +16,7 @@ class DropDownMenuWidget<T> extends StatelessWidget {
   String displayText;
   bool isNotString ;
 
-  DropDownMenuWidget({
+  AboutYouMenuWidget({
     super.key,
     this.isLoading = true,
     this.isNotString = true,
@@ -30,7 +30,7 @@ class DropDownMenuWidget<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 34.w),
+      padding:  EdgeInsets.symmetric(horizontal: 14.w),
       child: Stack(
         children: [
           Padding(

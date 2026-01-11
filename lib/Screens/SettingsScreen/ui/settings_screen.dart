@@ -12,7 +12,6 @@ import 'package:kashif/Screens/ProfileScreen/ui/widget/no_mission_shots_widget.d
 import 'package:kashif/Screens/ProfileScreen/ui/widget/one_city_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/header_profile_widget.dart';
-import 'package:kashif/Screens/ProfileScreen/ui/widget/list_city_widget.dart';
 import 'package:kashif/Screens/SettingsScreen/controller/settings_controller.dart';
 import 'package:kashif/Screens/SettingsScreen/ui/widget/container_settings_widget.dart';
 import 'package:kashif/Screens/SettingsScreen/ui/widget/log_out_show_dialog_widget.dart';
@@ -79,13 +78,14 @@ class SettingsScreen extends StatelessWidget {
                     title: 'Edit Profile',
                     image: Images.userprofile,
                     haveArrow: false,
-                    onTap: () => con.NavigationEditProfile(),
+                    onTap: () => con.navigationEditProfile(),
                   ),
                   SizedBox(height: 7.h),
                   ContainerSettingsWidget(
                     title: 'Change Password',
                     image: Images.passwordchange,
                     haveArrow: false,
+                    onTap: () => con.navigationChangePassword(),
                   ),
                   SizedBox(height: 7.h),
                   ContainerSettingsWidget(

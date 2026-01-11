@@ -6,16 +6,17 @@ import 'package:get/get.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/carousel_slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/conquered_cities_lock_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/conquered_citites_widget.dart';
+import 'package:kashif/Screens/ProfileScreen/ui/widget/drop_down_menu_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/make_first_victory_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/missions_shots_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/no_mission_shots_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/one_city_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/header_profile_widget.dart';
-import 'package:kashif/Screens/ProfileScreen/ui/widget/list_city_widget.dart';
 import 'package:kashif/Screens/SettingsScreen/controller/settings_controller.dart';
 import 'package:kashif/Screens/SettingsScreen/ui/widget/container_settings_widget.dart';
 import 'package:kashif/Screens/SettingsScreen/ui/widget/log_out_show_dialog_widget.dart';
+import 'package:kashif/Utilities/CustomWidgets/custom_new_botton_login.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text_filed_login.dart';
 import 'package:overlapped_carousel/overlapped_carousel.dart';
@@ -92,13 +93,39 @@ class EditProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 32.h),
-                  CustomText('Your name'),
-                  CustomTextFieldLogin(
-                    controller: TextEditingController(),
-                    suffixIcon: Image.asset(Images.user,scale: 4,),
-                    hintText: '',
-                    icon: Images.user,
+                  SizedBox(height: 12.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 90.w),
+                    child: CustomText('Your name', color: Colors.grey.shade300),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 34.w),
+                    child: CustomTextFieldLogin(
+                      controller: TextEditingController(),
+                      suffixIcon: Image.asset(Images.editicon, scale: 4),
+                      hintText: '',
+                      icon: Images.user,
+                    ),
+                  ),
+                  SizedBox(height: 22.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 90.w),
+                    child: CustomText(
+                      'Your country',
+                      color: Colors.grey.shade300,
+                    ),
+                  ),
+                  DropDownMenuWidget(
+                    selectedItem: controller,
+                    icon: Images.earth,
+                    items: [],
+                    onChange: (T) {},
+                    displayText: 'Select your country',
+                  ),
+                  SizedBox(height: 30.h),
+                  CustomNewButtonLogin(
+                    title: 'Save',
+                    onTap: () {},
                   ),
                 ],
               ),

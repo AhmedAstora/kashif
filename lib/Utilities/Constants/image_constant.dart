@@ -44,6 +44,7 @@ class Images {
   static String search = '$imagePath/search.png';
   static String change = '$imagePath/change.png';
   static String logout = '$imagePath/logout.png';
+  static String editicon = '$imagePath/edit_icon.png';
   static String passport = '$imagePath/passport.png';
   static String privacy = '$imagePath/privacy.png';
   static String privacypolicy = '$imagePath/privacy_policy.png';
@@ -59,4 +60,5 @@ class Images {
   static String lockfill = '$imagePath/lock_fill.png';
   static String awardbadgeprize = '$imagePath/award_badge_prize.png';
   static String educationalgamelogo = '$imagePath/educational_game_logo.png';
+  static String airPlan = '$imagePath/airplan.png';
 }

@@ -7,7 +7,7 @@ import '../Constants/image_constant.dart';
 class CustomTextFieldLogin extends StatefulWidget {
   bool isPassword = false;
   final String hintText;
-   String icon;
+  String icon;
   Function(String?)? onChange;
   Widget? suffixIcon;
   Widget? prefixIcon;
@@ -26,8 +26,10 @@ class CustomTextFieldLogin extends StatefulWidget {
   double borderWidth;
   double opacity;
 
-  double? fontSize ;
-  FontWeight? fontWeight ;
+  double? fontSize;
+
+  FontWeight? fontWeight;
+
   AutovalidateMode? autovalidateMode;
   int? maxLines;
   int? maxLength;
@@ -85,9 +87,9 @@ class _CustomTextFieldState extends State<CustomTextFieldLogin> {
           children: [
             Image.asset(Images.circle, scale: 4),
             Image.asset(widget.icon, scale: 4),
-
           ],
         ),
+
         Padding(
           padding: const EdgeInsets.only(left: 57),
           child: Stack(
@@ -131,14 +133,12 @@ class _CustomTextFieldState extends State<CustomTextFieldLogin> {
                             child: widget.prefixIcon,
                           )
                         : null,
-                    prefixIconConstraints: BoxConstraints(
-
-                    ),
-                    suffixIcon: widget.suffixIcon!=null
-                    ?Padding(
-                      padding: EdgeInsets.only(right: 20.w),
-                      child: widget.suffixIcon,
-                    ): null,
+                    prefixIconConstraints: BoxConstraints(),
+                    // suffixIcon: widget.suffixIcon!=null
+                    // ?Padding(
+                    //   padding: EdgeInsets.only(right: 20.w),
+                    //   child: widget.suffixIcon,
+                    // ): null,
                     suffixIconConstraints: BoxConstraints(
                       maxWidth: 60.r,
                       maxHeight: 20.r,
@@ -173,6 +173,8 @@ class _CustomTextFieldState extends State<CustomTextFieldLogin> {
             ],
           ),
         ),
+
+        Align(alignment: Alignment.centerRight, child: widget.suffixIcon),
       ],
     );
   }
