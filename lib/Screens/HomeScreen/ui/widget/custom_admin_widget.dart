@@ -42,7 +42,7 @@ class CustomAdminWidget extends StatelessWidget {
                       fontSize: 18.sp,
                     ),
                     SizedBox(width: 5.w),
-                    Image.asset(Images.America, scale: 4),
+                    Image.asset(Images.america, scale: 4),
                   ],
                 ),
                 CustomText(
@@ -59,7 +59,7 @@ class CustomAdminWidget extends StatelessWidget {
             top: 15.h,
             child: CircleAvatar(
               radius: 40.r,
-              child: Image.asset(Images.addphoto),
+              child: Image.asset(Images.addPhoto),
             ),
           ),
         ],

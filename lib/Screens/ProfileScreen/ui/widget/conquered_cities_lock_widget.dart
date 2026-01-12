@@ -22,7 +22,7 @@ class ConqueredCitiesLockWidget extends StatelessWidget {
               fontSize: 16.sp,
             ),
             SizedBox(width: 10.w),
-            Image.asset(Images.lockfill, scale: 4),
+            Image.asset(Images.lockFill, scale: 4),
           ],
         ),
         CustomText(
@@ -47,7 +47,7 @@ class ConqueredCitiesLockWidget extends StatelessWidget {
               radius: 40.r,
               backgroundColor: Colors.black.withOpacity(0.4),
             ),
-            Image.asset(Images.lockfill, scale: 4),
+            Image.asset(Images.lockFill, scale: 4),
           ],
         ),
       ],

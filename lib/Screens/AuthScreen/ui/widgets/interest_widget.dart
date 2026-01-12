@@ -50,7 +50,7 @@ VoidCallback? onTap;
           Align(
             alignment: AlignmentGeometry.topRight,
             child: Image.asset(
-            isSelected ?Images.checkbox : Images.addbotton,
+            isSelected ?Images.checkbox : Images.addButton,
               width: 48.r,
               height: 48.r,
             ),

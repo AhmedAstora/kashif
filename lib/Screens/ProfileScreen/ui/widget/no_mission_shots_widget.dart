@@ -32,7 +32,7 @@ class NoMissionShotsWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(Images.camerafill,scale: 4,),
+              Image.asset(Images.cameraFill,scale: 4,),
               SizedBox(width: 10.w),
               CustomText(
                 'Revive your missions with a shot',

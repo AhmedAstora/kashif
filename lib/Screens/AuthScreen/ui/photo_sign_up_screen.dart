@@ -70,11 +70,11 @@ class PhotoSignUpScreen extends StatelessWidget {
                             width: 170.w,
                             child: Stack(
                               children: [
-                                Image.asset(Images.addphoto, scale: 4),
+                                Image.asset(Images.addPhoto, scale: 4),
                                 Positioned(
                                   bottom: 1,
                                   right: 1,
-                                  child: Image.asset(Images.addbotton, scale: 4),
+                                  child: Image.asset(Images.addButton, scale: 4),
                                 ),
                               ],
                             ),
@@ -119,7 +119,7 @@ class PhotoSignUpScreen extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                       ),
                       SizedBox(width: 5.w),
-                      Image.asset(Images.rightarrowback, scale: 4),
+                      Image.asset(Images.rightArrowBack, scale: 4),
                     ],
                   ),
                 ],

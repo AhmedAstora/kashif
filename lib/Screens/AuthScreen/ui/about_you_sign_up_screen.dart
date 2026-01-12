@@ -65,7 +65,7 @@ class AboutYouSignUpScreen extends StatelessWidget {
                       SizedBox(height: 15.h),
                       AboutYouMenuWidget(
                         selectedItem: controller,
-                        icon: Images.citybuildings,
+                        icon: Images.cityBuildings,
                         items: [],
                         onChange: (T) {},
                         displayText: 'Select your country',

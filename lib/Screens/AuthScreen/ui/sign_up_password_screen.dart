@@ -77,7 +77,7 @@ class SignUpPasswordScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 15.h),
                         CustomTextFieldLogin(
-                          icon: Images.confirmlock,
+                          icon: Images.confirmLock,
                           hintText: "Confirm Password",
                           borderColor: Color(0xff293767),
                           controller: TextEditingController(),

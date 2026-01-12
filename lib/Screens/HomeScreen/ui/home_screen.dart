@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   CustomText('Turn the world to your playground, Start now!'),
                   SizedBox(width: 5.w),
-                  Image.asset(Images.iconcarrier, scale: 4),
+                  Image.asset(Images.iconCarrier, scale: 4),
                 ],
               ),
               SizedBox(height: 35.h),

@@ -83,7 +83,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(height: 7.h),
                   ContainerSettingsWidget(
                     title: 'Change Password',
-                    image: Images.passwordchange,
+                    image: Images.passwordChange,
                     haveArrow: false,
                     onTap: () => con.navigationChangePassword(),
                   ),
@@ -136,7 +136,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(height: 7.h),
                   ContainerSettingsWidget(
                     title: 'privacy Policy',
-                    image: Images.privacypolicy,
+                    image: Images.privacyPolicy,
                   ),
                   SizedBox(height: 32.h),
                   GestureDetector(
