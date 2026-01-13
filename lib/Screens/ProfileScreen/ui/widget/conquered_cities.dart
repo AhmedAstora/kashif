@@ -4,8 +4,8 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
 
-class CityWidget extends StatelessWidget {
-  CityWidget({
+class ConqueredCities extends StatelessWidget {
+  ConqueredCities({
     this.isSelected = false,
     this.onTap,
     required this.title,
@@ -30,9 +30,9 @@ class CityWidget extends StatelessWidget {
               radius: radius,
               child: ClipOval(child: Image.asset(image, fit: BoxFit.cover)),
             ),
+            Image.asset(Images.educationalGameLogo,scale: 4,),
           ],
         ),
-
         SizedBox(height: 5.h),
         CustomText(title, fontSize: 10.sp, textAlign: TextAlign.center),
       ],

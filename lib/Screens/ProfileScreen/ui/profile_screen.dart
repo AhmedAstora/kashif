@@ -23,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
     super.key,
     this.oneCity = true,
     this.manyCities = true,
-    this.conqueredCities = true,
+    this.conqueredCities = false,
   });
 
   final bool oneCity;
@@ -109,7 +109,9 @@ class ProfileScreen extends StatelessWidget {
                               )
                             : OneCityWidget(),
                       )
-                    : SliderWidget(),
+                    :false? SliderWidget(): SizedBox(),
+
+
               ),
               SizedBox(height: 18.h),
            //   NoMissionShotsWidget(),

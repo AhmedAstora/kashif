@@ -87,7 +87,7 @@ class EditProfileScreen extends StatelessWidget {
                           ),
                           Align(
                             alignment: Alignment.bottomRight,
-                            child: Image.asset(Images.iconimage, scale: 4),
+                            child: Image.asset(Images.iconImage, scale: 4),
                           ),
                         ],
                       ),
@@ -102,7 +102,7 @@ class EditProfileScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 34.w),
                     child: CustomTextFieldLogin(
                       controller: TextEditingController(),
-                      suffixIcon: Image.asset(Images.editicon, scale: 4),
+                      suffixIcon: Image.asset(Images.editIcon, scale: 4),
                       hintText: '',
                       icon: Images.user,
                     ),

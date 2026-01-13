@@ -23,7 +23,7 @@ class CustomNewButtonLogin extends StatelessWidget {
       child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset(isTapped ? Images.button_login_click : Images.button_login,scale: 3.7, ),
+            Image.asset(isTapped ? Images.buttonLoginClick : Images.buttonLogin,scale: 3.7, ),
             CustomText(
               title,
               fontWeight: FontWeight.w700,

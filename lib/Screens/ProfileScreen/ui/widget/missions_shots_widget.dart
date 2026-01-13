@@ -46,7 +46,7 @@ class MissionsShotsWidget extends StatelessWidget {
                       fontSize: 18.sp,
                       color: Colors.black,
                     ),
-                    Image.asset(Images.bluelock,scale: 4,)
+                    Image.asset(Images.blueLock,scale: 4,)
                   ],
                 ),
 

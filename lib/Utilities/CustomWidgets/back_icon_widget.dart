@@ -12,7 +12,7 @@ class BackIconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => Get.back(),
-      child:   Image.asset(Images.leftarrowback, scale: 4),
+      child:   Image.asset(Images.leftArrowBack, scale: 4),
     );
   }
 }

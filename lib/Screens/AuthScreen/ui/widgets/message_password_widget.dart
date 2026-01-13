@@ -15,7 +15,7 @@ class MessagePasswordWidget extends StatelessWidget {
       width: 275.w,
       child: Stack(
         children: [
-          Image.asset(Images.passwordlist, scale: 4),
+          Image.asset(Images.passwordList, scale: 4),
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 15.w,vertical: 5.h),
             child: Column(

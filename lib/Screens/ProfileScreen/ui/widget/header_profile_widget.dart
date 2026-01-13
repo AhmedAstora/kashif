@@ -18,7 +18,7 @@ class HeaderProfileWidget extends StatelessWidget {
               alignment: AlignmentGeometry.center,
               children: [
                 Image.asset(Images.circle,scale: 4,),
-                Image.asset(Images.awardbadgeprize,scale: 4,),
+                Image.asset(Images.awardBadgePrize,scale: 4,),
               ],
             ),
             SizedBox(
@@ -33,7 +33,7 @@ class HeaderProfileWidget extends StatelessWidget {
         Column(
           children: [
             CircleAvatar(
-              radius: 60.r,
+              radius: 57.r,
               child: ClipOval(
                 child: Image.asset(
                   Images.person,
@@ -64,7 +64,7 @@ class HeaderProfileWidget extends StatelessWidget {
               alignment: AlignmentGeometry.center,
               children: [
                 Image.asset(Images.circle,scale: 4,),
-                Image.asset(Images.educationalgamelogo,scale: 4,),
+                Image.asset(Images.educationalGameLogo,scale: 4,),
               ],
             ),
             SizedBox(

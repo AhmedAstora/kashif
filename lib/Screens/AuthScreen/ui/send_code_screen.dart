@@ -46,7 +46,7 @@ class SendCodeScreen extends StatelessWidget {
                       children: [
                         BackIconWidget(),
                         SizedBox(width: 38.w),
-                        Image.asset(Images.sendcodelogo, scale: 4),
+                        Image.asset(Images.sendCodeLogo, scale: 4),
                       ],
                     ),
                     SizedBox(height: 10.h),

@@ -12,16 +12,20 @@ class CarouselSliderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // CustomText(
+        //   'Every shot is a victory',
+        //   fontWeight: FontWeight.w600,
+        //   fontSize: 16.sp,
+        // ),
         CustomText(
-          'Every shot is a victory',
+          'Shots of Sarah’s Journey',
           fontWeight: FontWeight.w600,
           fontSize: 16.sp,
         ),
-        SizedBox(height: 10.h),
         Container(
-          height: 130.h,
+          height: 120.h,
           child: CarouselSlider(
-            items: List.generate(50, (index) {
+            items: List.generate(20, (index) {
               return Transform.translate(
                 offset: Offset(index == 2 ? 10 : -40, 10),
                 // مقدار التداخل

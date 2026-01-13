@@ -18,7 +18,7 @@ class CustomCheckBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child:  Image.asset(isTapped ? Images.checkboxclick : Images.checkbox,scale: 4, ),
+      child:  Image.asset(isTapped ? Images.checkBoxClick : Images.checkbox,scale: 4, ),
 
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kashif/Screens/ProfileScreen/ui/widget/conquered_cities.dart';
 
 import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
@@ -32,9 +33,9 @@ class ConqueredCititesWidget extends StatelessWidget {
             padding: EdgeInsets.zero,
             itemCount: 5,
             separatorBuilder: (_, i) => SizedBox(width: 20.w),
-            itemBuilder: (_, i) => CityWidget(
+            itemBuilder: (_, i) => ConqueredCities(
               image: Images.mosque,
-              title: 'New York',
+              title: 'prise',
               radius: 45.r,
             ),
           ),
