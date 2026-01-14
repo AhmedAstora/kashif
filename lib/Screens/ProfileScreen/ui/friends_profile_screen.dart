@@ -19,6 +19,7 @@ import 'package:overlapped_carousel/overlapped_carousel.dart';
 
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
+import '../../../Utilities/CustomWidgets/back_arrow_widget.dart';
 import '../../../Utilities/CustomWidgets/custom_new_button.dart';
 
 class FriendsProfileScreen extends StatelessWidget {
@@ -55,7 +56,7 @@ class FriendsProfileScreen extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.arrow_back, size: 30.r, color: Colors.white),
+                    BackArrowWidget(),
                     SizedBox(width: 120.w),
                     CustomText(
                       'Sarah',

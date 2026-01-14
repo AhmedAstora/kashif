@@ -16,6 +16,7 @@ import 'package:overlapped_carousel/overlapped_carousel.dart';
 
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
+import '../../../Utilities/CustomWidgets/back_arrow_widget.dart';
 import '../../../Utilities/CustomWidgets/custom_new_button.dart';
 
 class MissionsShotsScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class MissionsShotsScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 7.w),
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_back, size: 30.r, color: Colors.white),
+                    BackArrowWidget(),
                     SizedBox(width: 20.w),
                     CustomText(
                       'Missions Shots',

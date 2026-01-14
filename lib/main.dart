@@ -8,6 +8,8 @@ import 'package:kashif/Screens/HomeScreen/ui/home_screen.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/friends_profile_screen.dart';
 import 'Helper/SharedPreferance/shared_preferance.dart';
 import 'Screens/AuthScreen/ui/about_you_sign_up_screen.dart';
+import 'Screens/HomeScreen/ui/friends_screen.dart';
+import 'Screens/HomeScreen/ui/notification_screen.dart';
 import 'Screens/ProfileScreen/ui/profile_screen.dart';
 import 'Screens/SettingsScreen/ui/settings_screen.dart';
 import 'Screens/SplashScreen/ui/splash_screen.dart';
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
         translations: Messages(),
         // supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
         // locale: Locale(SpHelper.spHelper.getLanguage()! == "ar" ? "ar" : "en"),
-        home: FriendsProfileScreen(),
+        home: HomeScreen(),
       ),
     );
   }

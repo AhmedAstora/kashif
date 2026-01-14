@@ -58,8 +58,11 @@ class Images {
   static String passwordList = '$imagePath/password_list.png';
   static String cameraFill = '$imagePath/camera_fill.png';
   static String lockFill = '$imagePath/lock_fill.png';
+  static String iconNew = '$imagePath/icon_new.png';
   static String awardBadgePrize = '$imagePath/award_badge_prize.png';
+  static String notificationMessage = '$imagePath/notification_message.png';
   static String educationalGameLogo = '$imagePath/educational_game_logo.png';
   static String airPlan = '$imagePath/airplan.png';
   static String removeUser = '$imagePath/remove_user.png';
+  static String notificationsOffOutlined = '$imagePath/notifications_off_outlined.png';
 }

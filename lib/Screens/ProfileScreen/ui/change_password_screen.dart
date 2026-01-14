@@ -9,6 +9,7 @@ import 'package:kashif/Utilities/CustomWidgets/custom_text_field.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text_filed_login.dart';
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
+import '../../../Utilities/CustomWidgets/back_arrow_widget.dart';
 import '../../../Utilities/CustomWidgets/back_icon_widget.dart';
 import '../../../Utilities/CustomWidgets/custom_text.dart';
 
@@ -38,14 +39,7 @@ class ChangePasswordScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 7.w),
                       child: Row(
                         children: [
-                          GestureDetector(
-                            onTap: () => Get.back(),
-                            child: Icon(
-                              Icons.arrow_back,
-                              size: 30.r,
-                              color: Colors.white,
-                            ),
-                          ),
+                          BackArrowWidget(),
                           SizedBox(width: 20.w),
                           CustomText(
                             'Change Password',

@@ -33,7 +33,6 @@ class ConqueredCities extends StatelessWidget {
             Image.asset(Images.educationalGameLogo,scale: 4,),
           ],
         ),
-        SizedBox(height: 5.h),
         CustomText(title, fontSize: 10.sp, textAlign: TextAlign.center),
       ],
     );
