@@ -2,25 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/completed_missions_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/message_today_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/message_yesterday_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/my_friends_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/new_cities_added_widget.dart';
+import 'package:kashif/Screens/HomeScreen/ui/widget/search_text_field_friends_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/you_and_friend_widget.dart';
-
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
 import '../../../Utilities/CustomWidgets/back_arrow_widget.dart';
 import '../../../Utilities/CustomWidgets/custom_text.dart';
-import '../../ProfileScreen/ui/widget/common_achievements.dart';
-import '../../ProfileScreen/ui/widget/conquered_cities.dart';
 import '../controller/home_controller.dart';
 
 class FriendsScreen extends StatelessWidget {
-  FriendsScreen({super.key});
+  FriendsScreen({super.key,this.searchEnabled = true});
 
   final controller = Get.put(HomeController());
+  final bool searchEnabled ;
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
@@ -97,8 +93,7 @@ class FriendsScreen extends StatelessWidget {
                                 ),
                                 Spacer(),
                                 GestureDetector(
-                                  onTap:
-                                    ()=> con.navigationMyFriends(),
+                                  onTap: () => con.navigationMyFriends(),
 
                                   child: CustomText(
                                     'see all',
@@ -116,7 +111,8 @@ class FriendsScreen extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 padding: EdgeInsets.zero,
                                 itemCount: 5,
-                                separatorBuilder: (_, i) => SizedBox(width: 20.w),
+                                separatorBuilder: (_, i) =>
+                                    SizedBox(width: 20.w),
                                 itemBuilder: (_, i) => MyFriendsWidget(),
                               ),
                             ),
@@ -145,15 +141,18 @@ class FriendsScreen extends StatelessWidget {
                             'Invite friends to your current city and discover',
                           ),
                         ),
-                          Center(
-                            child: CustomText(
-                              'what you share',
-                            ),
-                          ),
+                        Center(child: CustomText('what you share')),
 
                       ],
                     ),
                     SizedBox(height: 8.h),
+                    searchEnabled? Center(
+                      child: SearchTextFieldFriendsWidget(
+                        controller: controller.searchController,
+                        hintText: 'friend’s username',
+
+                      ),
+                    ):
                     Center(child: Image.asset(Images.search, scale: 4)),
                     SizedBox(height: 26.h),
                     Stack(
@@ -256,7 +255,7 @@ class FriendsScreen extends StatelessWidget {
             ),
           ),
         );
-      }
+      },
     );
   }
 }

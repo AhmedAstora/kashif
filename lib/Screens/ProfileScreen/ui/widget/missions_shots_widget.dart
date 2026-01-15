@@ -10,8 +10,6 @@ class MissionsShotsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 319,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.r),
         boxShadow: [
@@ -31,35 +29,37 @@ class MissionsShotsWidget extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.w),
+        padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                CustomText('Paris', color: Colors.black),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Column(
                   children: [
+                    CustomText('Paris', color: Colors.black),
                     CustomText(
                       'Eiffel Tower',
                       fontSize: 18.sp,
                       color: Colors.black,
                     ),
-                    Image.asset(Images.blueLock,scale: 4,)
+
+
                   ],
                 ),
-
+                SizedBox(
+                  width: 110.w,
+                ),
+                Image.asset(Images.blueLock,scale: 4,),
               ],
             ),
             SizedBox(height: 10.h),
             Container(
-              width: double.infinity,
-              height: 230,
+              height: 230.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.r),
                 image: DecorationImage(
-                  image: AssetImage(Images.person),
+                  image: AssetImage(Images.mosque),
                   fit: BoxFit.cover,
                 ),
               ),
