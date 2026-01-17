@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/my_friends_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/search_text_field_friends_widget.dart';
+import 'package:kashif/Screens/HomeScreen/ui/widget/search_friends_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/you_and_friend_widget.dart';
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
@@ -147,7 +147,7 @@ class FriendsScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.h),
                     searchEnabled? Center(
-                      child: SearchTextFieldFriendsWidget(
+                      child: SearchFriendsWidget(
                         controller: controller.searchController,
                         hintText: 'friend’s username',
 

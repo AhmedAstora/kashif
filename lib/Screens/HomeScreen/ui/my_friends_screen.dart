@@ -21,6 +21,7 @@ class MyFriendsScreen extends StatelessWidget {
   MyFriendsScreen({super.key});
 
   final controller = Get.put(HomeController());
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
@@ -49,7 +50,10 @@ class MyFriendsScreen extends StatelessWidget {
                       Spacer(),
                       Image.asset(Images.search, scale: 4),
                       SizedBox(width: 17.w),
-                      Image.asset(Images.addFriends, scale: 4),
+                      GestureDetector(
+                        onTap:()=> con.navigationAddFriend(),
+                        child: Image.asset(Images.addFriends, scale: 4),
+                      ),
                     ],
                   ),
                 ),
@@ -88,7 +92,7 @@ class MyFriendsScreen extends StatelessWidget {
             ),
           ),
         );
-      }
+      },
     );
   }
 }

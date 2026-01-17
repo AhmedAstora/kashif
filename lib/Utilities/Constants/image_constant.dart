@@ -66,5 +66,8 @@ class Images {
   static String locationMap = '$imagePath/location_map.png';
   static String removeUser = '$imagePath/remove_user.png';
   static String addFriends = '$imagePath/add_friends.png';
+  static String removeFriends = '$imagePath/remove_friends.png';
+  static String addButtonFriends = '$imagePath/add_button_friends.png';
+  static String checkButton = '$imagePath/check_button.png';
   static String notificationsOffOutlined = '$imagePath/notifications_off_outlined.png';
 }

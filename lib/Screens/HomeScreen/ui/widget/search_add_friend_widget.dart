@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../Utilities/Constants/image_constant.dart';
 
-class SearchTextFieldFriendsWidget extends StatefulWidget {
+class SearchAddFriendWidget extends StatefulWidget {
   final String hintText;
   final TextEditingController controller;
 
@@ -28,7 +28,7 @@ class SearchTextFieldFriendsWidget extends StatefulWidget {
   final double paddingV;
   final double fontSize;
 
-  const SearchTextFieldFriendsWidget({
+  const SearchAddFriendWidget({
     super.key,
     required this.hintText,
     required this.controller,
@@ -51,10 +51,10 @@ class SearchTextFieldFriendsWidget extends StatefulWidget {
   });
 
   @override
-  State<SearchTextFieldFriendsWidget> createState() => _SearchTextFieldWidgetState();
+  State<SearchAddFriendWidget> createState() => _SearchTextFieldWidgetState();
 }
 
-class _SearchTextFieldWidgetState extends State<SearchTextFieldFriendsWidget> {
+class _SearchTextFieldWidgetState extends State<SearchAddFriendWidget> {
   bool hasText = false;
 
   @override
@@ -115,7 +115,7 @@ class _SearchTextFieldWidgetState extends State<SearchTextFieldFriendsWidget> {
               widget.onChange?.call('');
             },
             child: Padding(
-              padding: EdgeInsets.only(right: 12.w),
+              padding: EdgeInsets.only(right: 8.w),
               child: Icon(
                 Icons.close,
                 color: Colors.white.withOpacity(0.8),
@@ -124,9 +124,9 @@ class _SearchTextFieldWidgetState extends State<SearchTextFieldFriendsWidget> {
             ),
           )
               : Padding(
-            padding: EdgeInsets.only(right: 12.w),
+            padding: EdgeInsets.only(right: 8.w),
             child: Image.asset(
-              Images.search,
+              Images.addFriends,
               scale: 4,
             ),
           ),
