@@ -70,4 +70,11 @@ class Images {
   static String addButtonFriends = '$imagePath/add_button_friends.png';
   static String checkButton = '$imagePath/check_button.png';
   static String notificationsOffOutlined = '$imagePath/notifications_off_outlined.png';
+  static String missionsButton = '$imagePath/missions_button.PNG';
+  static String locationFilm = '$iconPath/location_film.png';
+  static String locationMarker = '$iconPath/location_marker.png';
+  static String locationRestaurant = '$iconPath/location_restaurant.png';
+  static String locationShop = '$iconPath/location_shop.png';
+  static String locationTrees = '$iconPath/location_trees.png';
+  static String locationBank = '$iconPath/location_bank.png';
 }
