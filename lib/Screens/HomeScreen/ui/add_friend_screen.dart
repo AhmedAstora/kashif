@@ -93,7 +93,7 @@ class AddFriendScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return FriendCard();
                       },
-                    )
+                    ),
                   ],
                 ),
               ],
