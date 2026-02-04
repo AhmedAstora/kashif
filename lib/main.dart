@@ -9,6 +9,7 @@ import 'package:kashif/Screens/MissionsScreen/ui/missions_new_user_screen.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/friends_profile_screen.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/missions_shots_screen.dart';
 import 'Helper/SharedPreferance/shared_preferance.dart';
+import 'Screens/AchievementsScreen/ui/achievements_screen.dart';
 import 'Screens/AuthScreen/ui/about_you_sign_up_screen.dart';
 import 'Screens/HomeScreen/ui/friend_requests_screen.dart';
 import 'Screens/HomeScreen/ui/friends_screen.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
         translations: Messages(),
         // supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
         // locale: Locale(SpHelper.spHelper.getLanguage()! == "ar" ? "ar" : "en"),
-        home: SavedMissionsScreen(),
+        home: AchievementsScreen(),
       ),
     );
   }

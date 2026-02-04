@@ -71,6 +71,7 @@ class Images {
   static String checkButton = '$imagePath/check_button.png';
   static String notificationsOffOutlined = '$imagePath/notifications_off_outlined.png';
   static String savedMissions = '$imagePath/saved_missions.png';
+  static String arrowForwardOutline = '$imagePath/arrow_forward_outline.png';
   static String missionsButton = '$imagePath/missions_button.PNG';
   static String locationFilm = '$iconPath/location_film.png';
   static String locationMarker = '$iconPath/location_marker.png';

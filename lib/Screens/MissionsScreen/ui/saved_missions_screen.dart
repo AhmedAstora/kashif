@@ -26,7 +26,6 @@ class SavedMissionsScreen extends StatelessWidget {
       builder: (context) {
         return Scaffold(
           body: Container(
-            alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               gradient: AppColor.getGradient(stops: [0, 0.7]),
             ),

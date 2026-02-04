@@ -12,11 +12,10 @@ class YourSavedMissionsWidget extends StatelessWidget {
     return  Container(
       padding: EdgeInsets.only(top: 7, left: 13, right: 21,),
       height: 126.h,
-      width: 362.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.r),
         border: Border.all(
-          width: 0.5.w,
+          width: 1.w,
           color: Color(0xff8B9EE0),
         ),
       ),
@@ -115,7 +114,7 @@ class YourSavedMissionsWidget extends StatelessWidget {
               Spacer(),
               Icon(
                 Icons.arrow_forward_ios,
-                size: 17.sp,
+                size: 19.sp,
                 color: Colors.white,
               ),
             ],
