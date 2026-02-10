@@ -1,23 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:kashif/Screens/AchievementsScreen/ui/widget/achievements_widget.dart';
 import 'package:kashif/Screens/AchievementsScreen/ui/widget/completed_achievements_widget.dart';
 import 'package:kashif/Screens/AchievementsScreen/ui/widget/great_job_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/custom_admin_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/interest_home_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/complete_all_cairo_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/history_lover_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/location_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/missions_city_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/missions_now_city_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
-
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
-import '../../../Utilities/CustomWidgets/custom_new_button.dart';
-import '../../HomeScreen/ui/widget/my_friends_widget.dart';
 import '../../ProfileScreen/ui/widget/conquered_cities.dart';
 
 class AchievementsScreen extends StatelessWidget {

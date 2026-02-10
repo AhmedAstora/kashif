@@ -43,7 +43,7 @@ class FriendRequestsScreen extends StatelessWidget {
                       BackArrowWidget(),
                       SizedBox(width: 20.w),
                       CustomText(
-                        'Add Friend',
+                        'Friend Requests',
                         fontSize: 20.sp,
                         fontWeight: FontWeight.w500,
                       ),
@@ -67,7 +67,9 @@ class FriendRequestsScreen extends StatelessWidget {
                     padding: EdgeInsets.zero,
                     itemCount: 3,
                     separatorBuilder: (_, i) => SizedBox(height: 10.h),
-                    itemBuilder: (_, i) => FriendRequestsWidget(),
+                    itemBuilder: (_, i) => FriendRequestsWidget(
+                      isTapped: con.isTappedCheckButton,
+                      onTap:()=> con.onTapCheckButton(),),
                   ),
                 ),
               ],

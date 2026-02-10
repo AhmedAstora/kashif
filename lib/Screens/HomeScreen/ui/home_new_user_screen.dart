@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/admin_new_user_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/admin_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/cities_in_progress_widget.dart';
+
 import 'package:kashif/Screens/HomeScreen/ui/widget/interest_home_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 
@@ -13,8 +11,8 @@ import '../../../Utilities/Constants/image_constant.dart';
 import '../../../Utilities/CustomWidgets/custom_new_button.dart';
 import '../controller/home_controller.dart';
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class HomeNewUserScreen extends StatelessWidget {
+  HomeNewUserScreen({super.key});
 
   final controller = Get.put(HomeController());
 
@@ -45,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Spacer(),
                       GestureDetector(
-                        onTap: () => con.navigationFriends(),
+                        onTap:()=> con.navigationFriends(),
                         child: Icon(
                           Icons.people_rounded,
                           size: 27.sp,
@@ -54,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       SizedBox(width: 18.w),
                       GestureDetector(
-                        onTap: () => con.navigationNotification(),
+                         onTap:()=> con.navigationNotification(),
                         child: Icon(
                           Icons.notifications_none,
                           size: 27.sp,
@@ -75,46 +73,27 @@ class HomeScreen extends StatelessWidget {
                         'Turn the world to your playground, Start now!',
                       ),
                       SizedBox(width: 5.w),
-                      Image.asset(Images.fire, scale: 4),
+                      Image.asset(Images.iconCarrier, scale: 4),
                     ],
                   ),
-                  SizedBox(height: 52.h),
-                  AdminWidget(),
+                  SizedBox(height: 35.h),
+                  AdminNewUserWidget(),
                   SizedBox(height: 26.h),
-                  Row(
-                    children: [
-                      CustomText(
-                        'Cities in Progress',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16.sp,
-                      ),
-                      Spacer(),
-                      CustomText(
-                        'see all',
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey.shade300,
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 17.h),
-                  SizedBox(
-                    height: 130.h,
-                    child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      padding: EdgeInsets.zero,
-                      itemCount: 5,
-                      separatorBuilder: (_, i) => SizedBox(width: 12.w),
-                      itemBuilder: (_, i) => CitiesInProgressWidget(),
+                  Center(
+                    child: CustomText(
+                      'your city is full of missions,',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.sp,
                     ),
                   ),
-
-                  CustomText(
-                    'Nearby Picks for You',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16.sp,
+                  Center(
+                    child: CustomText(
+                      'pick one and go!',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.sp,
+                    ),
                   ),
-                  SizedBox(height: 17.h),
+                  SizedBox(height: 15.h),
                   SizedBox(
                     height: 150.h,
                     child: ListView.separated(
@@ -124,6 +103,12 @@ class HomeScreen extends StatelessWidget {
                       separatorBuilder: (_, i) => SizedBox(width: 10.w),
                       itemBuilder: (_, i) => InterestHomeWidget(),
                     ),
+                  ),
+                  SizedBox(height: 20.h),
+                  CustomNewButton(
+                    title: "Start from another city",
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
                   ),
                 ],
               ),

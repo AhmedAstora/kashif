@@ -6,9 +6,10 @@ import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
 
 class FriendRequestsWidget extends StatelessWidget {
-   FriendRequestsWidget({super.key, this.changeIcon = true});
+  FriendRequestsWidget({super.key, this.isTapped = false, this.onTap});
 
-  final bool changeIcon;
+  bool isTapped;
+  VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -17,94 +18,82 @@ class FriendRequestsWidget extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 23.w),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+              CircleAvatar(
+                radius: 32.r,
+                backgroundImage: AssetImage(Images.person),
+              ),
+              SizedBox(width: 10.w),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomText('\tNoah', fontSize: 16.sp),
+                    CustomText('@nn.oah'),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(Images.daemon, height: 16.h, width: 16.w),
+                        CustomText('962XP'),
+                        SizedBox(width: 11.w),
+                        Image.asset(
+                          Images.awardBadgePrize,
+                          height: 14.h,
+                          width: 14.w,
+                        ),
+                        CustomText('461'),
+                        SizedBox(width: 11.w),
+                        Image.asset(
+                          Images.educationalGameLogo,
+                          height: 14.h,
+                          width: 14.w,
+                        ),
+                        CustomText('12'),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        if (isTapped)   CustomText('You’re now friends!',color: Color(0xff8B9EE0),),
+                      ],
+                    )
+                    // Row(
+                    //   children: [
+                    //     CustomText('You have 2 mutual friends', fontSize: 12.sp),
+                    //     SizedBox(width: 5.w,),
+                    //     CircleAvatar(
+                    //       radius: 10.r,
+                    //       backgroundImage: AssetImage(Images.mosque),),
+                    //     SizedBox(width: 5.w,),
+                    //     CircleAvatar(
+                    //       radius: 10.r,
+                    //       backgroundImage: AssetImage(Images.mosque),),
+                    //   ],
+                    // ),
+                  ],
+                ),
+              ),
+              SizedBox(width: 40.w),
+               GestureDetector(
+                  onTap: onTap,
+                  child: Row(
                     children: [
-                      CircleAvatar(
-                        radius: 32.r,
-                        backgroundImage: AssetImage(Images.person),
+                      Image.asset(
+                        isTapped ? Images.checkButton : Images.addButtonFriends,
+                        scale: 4,
                       ),
-                      SizedBox(width: 10.w),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          CustomText('\tNoah', fontSize: 16.sp),
-                          CustomText('@nn.oah'),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                Images.daemon,
-                                height: 16.h,
-                                width: 16.w,
-                              ),
-                              CustomText('962XP'),
-                              SizedBox(width: 11.w),
-                              Image.asset(
-                                Images.awardBadgePrize,
-                                height: 14.h,
-                                width: 14.w,
-                              ),
-                              CustomText('461'),
-                              SizedBox(width: 11.w),
-                              Image.asset(
-                                Images.educationalGameLogo,
-                                height: 14.h,
-                                width: 14.w,
-                              ),
-                              CustomText('12'),
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: 45.w),
-                      GestureDetector(
-                        child: changeIcon
-                            ? Row(
-                          children: [
-                            Image.asset(Images.addButtonFriends, scale: 4),
-                            SizedBox(
-                              width: 12.w,
-                            ),
-                            Image.asset(Images.removeFriends, scale: 4),
-                          ],
-                        )
-                            : Row(
-                              children: [
-                                SizedBox(
-                                  width: 42.w,
-                                ),
-                                Image.asset(Images.checkButton, scale: 4),
-                              ],
-                            ),
-                      ),
+                      if (!isTapped) SizedBox(width: 12.w),
+                      if (!isTapped) Image.asset(Images.removeFriends, scale: 4),
                     ],
                   ),
-
-                  SizedBox(height: 10.h),
-                  // Row(
-                  //   children: [
-                  //     CustomText('You have 2 mutual friends', fontSize: 12.sp),
-                  //     SizedBox(width: 5.w,),
-                  //     CircleAvatar(
-                  //       radius: 10.r,
-                  //       backgroundImage: AssetImage(Images.mosque),),
-                  //     SizedBox(width: 5.w,),
-                  //     CircleAvatar(
-                  //       radius: 10.r,
-                  //       backgroundImage: AssetImage(Images.mosque),),
-                  //   ],
-                  // ),
-                  SizedBox(height: 10.h),
-                ],
-              ),
+                ),
             ],
           ),
         ),
+        SizedBox(height: 15.h,),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 22.w),
           child: Container(

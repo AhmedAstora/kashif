@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_carousel/flutter_3d_carousel.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kashif/Screens/HomeScreen/ui/widget/flight_slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/carousel_slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/city_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/conquered_cities_lock_widget.dart';
@@ -101,23 +102,30 @@ class ProfileScreen extends StatelessWidget {
                                 itemCount: 5,
                                 separatorBuilder: (_, i) =>
                                     SizedBox(width: 20.w),
-                                itemBuilder: (_, i) => CityWidget(
-                                  image: Images.mosque,
-                                  title: 'New York',
-                                  radius: 30.r,
+                                itemBuilder: (_, i) => Column(
+                                  children: [
+                                    FlightSliderWidget(
+                                      imagePath: Images.mosque,
+                                      circleRadius: 24.r,
+                                      planeSize: 30.r,
+                                    ),
+                                    SizedBox(height: 5.h),
+                                    CustomText(
+                                      'Alexandria',
+                                      fontSize: 10.sp,
+                                    ),
+                                  ],
                                 ),
                               )
                             : OneCityWidget(),
                       )
-                    :false? SliderWidget(): SizedBox(),
-
-
+                    : false
+                    ? SliderWidget()
+                    : SizedBox(),
               ),
               SizedBox(height: 18.h),
-           //   NoMissionShotsWidget(),
-              manyCities
-                  ? CarouselSliderWidget()
-                  : MakeFirstVictoryWidget(),
+              //   NoMissionShotsWidget(),
+              manyCities ? CarouselSliderWidget() : MakeFirstVictoryWidget(),
               SizedBox(height: 18.h),
               conqueredCities
                   ? ConqueredCitiesLockWidget()

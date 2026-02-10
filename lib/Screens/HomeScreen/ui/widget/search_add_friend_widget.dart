@@ -41,7 +41,7 @@ class SearchAddFriendWidget extends StatefulWidget {
     this.cursorColor,
     this.borderColor = const Color(0x34293767),
     this.focusedBorderColor = const Color(0x34293767),
-    this.borderWidth = 1,
+    this.borderWidth = 2,
     this.enable = true,
     this.autofocus = false,
     this.borderRadius = 50,

@@ -27,68 +27,70 @@ class MyFriendsScreen extends StatelessWidget {
     return GetBuilder<HomeController>(
       builder: (con) {
         return Scaffold(
-          body: Container(
-            alignment: Alignment.bottomCenter,
-            decoration: BoxDecoration(
-              gradient: AppColor.getGradient(stops: [0, 0.7]),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 62.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 21.w),
-                  child: Row(
+          body: SingleChildScrollView(
+            child: Container(
+              alignment: Alignment.bottomCenter,
+              decoration: BoxDecoration(
+                gradient: AppColor.getGradient(stops: [0, 0.7]),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 62.h),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 21.w),
+                    child: Row(
+                      children: [
+                        BackArrowWidget(),
+                        SizedBox(width: 20.w),
+                        CustomText(
+                          'My Friends',
+                          fontSize: 20.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        Spacer(),
+                        Image.asset(Images.search, scale: 4),
+                        SizedBox(width: 17.w),
+                        GestureDetector(
+                          onTap:()=> con.navigationAddFriend(),
+                          child: Image.asset(Images.addFriends, scale: 4),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 30.h),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      BackArrowWidget(),
-                      SizedBox(width: 20.w),
-                      CustomText(
-                        'My Friends',
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w500,
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 24.w),
+                        child: CustomText(
+                          'Journey Together',
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                      Spacer(),
-                      Image.asset(Images.search, scale: 4),
-                      SizedBox(width: 17.w),
-                      GestureDetector(
-                        onTap:()=> con.navigationAddFriend(),
-                        child: Image.asset(Images.addFriends, scale: 4),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 24.w),
+                        child: CustomText(
+                          'Connect with friends, share progress, and keep conquering cities!',
+                        ),
+                      ),
+                      SizedBox(height: 25.h),
+                      SizedBox(
+                        height: 1000.h,
+                        child: ListView.separated(
+                          scrollDirection: Axis.vertical,
+                          padding: EdgeInsets.zero,
+                          itemCount: 10,
+                          separatorBuilder: (_, i) => SizedBox(height: 10.h),
+                          itemBuilder: (_, i) => SeeAllMyFriendsWidget(),
+                        ),
                       ),
                     ],
                   ),
-                ),
-                SizedBox(height: 30.h),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: CustomText(
-                        'Journey Together',
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.w),
-                      child: CustomText(
-                        'Connect with friends, share progress, and keep conquering cities!',
-                      ),
-                    ),
-                    SizedBox(height: 25.h),
-                    SizedBox(
-                      height: 700.h,
-                      child: ListView.separated(
-                        scrollDirection: Axis.vertical,
-                        padding: EdgeInsets.zero,
-                        itemCount: 8,
-                        separatorBuilder: (_, i) => SizedBox(height: 10.h),
-                        itemBuilder: (_, i) => SeeAllMyFriendsWidget(),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );

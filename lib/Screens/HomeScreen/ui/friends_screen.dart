@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:kashif/Screens/HomeScreen/ui/widget/empty_friend_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/my_friends_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/search_friends_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/you_and_friend_widget.dart';
@@ -9,6 +10,8 @@ import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
 import '../../../Utilities/CustomWidgets/back_arrow_widget.dart';
 import '../../../Utilities/CustomWidgets/custom_text.dart';
+import '../../ProfileScreen/ui/widget/common_achievements.dart';
+import '../../ProfileScreen/ui/widget/conquered_cities.dart';
 import '../controller/home_controller.dart';
 
 class FriendsScreen extends StatelessWidget {
@@ -46,6 +49,7 @@ class FriendsScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 30.h),
+                // EmptyFriendWidget()
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,7 +67,47 @@ class FriendsScreen extends StatelessWidget {
                         'See your friends and achievements in common.',
                       ),
                     ),
-                    SizedBox(height: 25.h),
+                    SizedBox(height: 20.h),
+                    Column(
+                      children: [
+                        Container(
+                          height: 45.h,
+                          decoration: BoxDecoration(
+                            color: Color(0xff8B9EE0).withOpacity(.5)
+                          ),
+                          child: GestureDetector(
+                            onTap: () => con.navigationFriendRequests(),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                               CustomText('Requests',fontSize: 16.sp,fontWeight: FontWeight.w600,),
+                                SizedBox(
+                                  width: 10.w,
+                                ),
+                                CircleAvatar(
+                                  radius: 14.r,
+                                  backgroundColor: Colors.white,
+                                  backgroundImage: AssetImage(Images.mosque),
+                                ),
+                                SizedBox(
+                                  width: 4.w,
+                                ),
+                                CircleAvatar(
+                                  radius: 14.r,
+                                  backgroundImage: AssetImage(Images.person),
+                                ),
+                                SizedBox(
+                                  width: 10.w,
+                                ),
+                                Icon(Icons.arrow_forward_ios,size: 15.r,color: Colors.white,)
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 15.h),
+                      ],
+                    ),
+
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 12.w),
                       child: Container(
@@ -129,22 +173,22 @@ class FriendsScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8.h),
-                    // Center(
-                    //   child: CustomText(
-                    //     '     Top Match: Ahmed 🎯  Discover what you share!',
-                    //   ),
-                    // ),
-                    Column(
-                      children: [
-                        Center(
-                          child: CustomText(
-                            'Invite friends to your current city and discover',
-                          ),
-                        ),
-                        Center(child: CustomText('what you share')),
-
-                      ],
+                    Center(
+                      child: CustomText(
+                        '     Top Match: Ahmed 🎯  Discover what you share!',
+                      ),
                     ),
+                    // Column(
+                    //   children: [
+                    //     Center(
+                    //       child: CustomText(
+                    //         'Invite friends to your current city and discover',
+                    //       ),
+                    //     ),
+                    //     Center(child: CustomText('what you share')),
+                    //
+                    //   ],
+                    // ),
                     SizedBox(height: 8.h),
                     searchEnabled? Center(
                       child: SearchFriendsWidget(
@@ -154,7 +198,7 @@ class FriendsScreen extends StatelessWidget {
                       ),
                     ):
                     Center(child: Image.asset(Images.search, scale: 4)),
-                    SizedBox(height: 26.h),
+                    SizedBox(height: 10.h),
                     Stack(
                       alignment: Alignment.topCenter,
                       children: [
@@ -177,71 +221,72 @@ class FriendsScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 SizedBox(height: 110.h),
-                                // Column(
-                                //   children: [
-                                //     Row(
-                                //       children: [
-                                //         Image.asset(
-                                //           Images.educationalGameLogo,
-                                //           height: 34.h,
-                                //           width: 34.w,
-                                //         ),
-                                //         SizedBox(width: 20.h),
-                                //         ConqueredCities(
-                                //           title: 'paris',
-                                //           image: Images.mosque,
-                                //           radius: 25.r,
-                                //         ),
-                                //         SizedBox(width: 20.h),
-                                //         ConqueredCities(
-                                //           title: 'Istanbul',
-                                //           image: Images.mosque,
-                                //           radius: 25.r,
-                                //         ),
-                                //       ],
-                                //     ),
-                                //     SizedBox(height: 20.h),
-                                //     Row(
-                                //       children: [
-                                //         Image.asset(Images.awardBadgePrize, scale: 4),
-                                //         SizedBox(width: 20.w),
-                                //         Expanded(
-                                //           child: SizedBox(
-                                //             height: 80.h, // ⚠️ مهم جدًا
-                                //             child: ListView.separated(
-                                //               scrollDirection: Axis.horizontal,
-                                //               padding: EdgeInsets.zero,
-                                //               itemCount: 5,
-                                //               separatorBuilder: (_, i) =>
-                                //                   SizedBox(width: 25.w),
-                                //               itemBuilder: (_, i) =>
-                                //                   CommonAchievements(),
-                                //             ),
-                                //           ),
-                                //         ),
-                                //       ],
-                                //     ),
-                                //   ],
-                                // ),
                                 Column(
                                   children: [
-                                    CustomText(
-                                      'No common achievements with Mia yet',
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 16.sp,
-                                    ),
-                                    SizedBox(height: 8.h),
-                                    CustomText(
-                                      'Invite her from your current city to',
-                                      color: Colors.grey.shade300,
-                                    ),
-                                    CustomText(
-                                      'begin the adventure!',
-                                      color: Colors.grey.shade300,
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                          Images.educationalGameLogo,
+                                          height: 34.h,
+                                          width: 34.w,
+                                        ),
+                                        SizedBox(width: 20.h),
+                                        ConqueredCities(
+                                          title: 'paris',
+                                          image: Images.mosque,
+                                          radius: 25.r,
+                                        ),
+                                        SizedBox(width: 20.h),
+                                        ConqueredCities(
+                                          title: 'Istanbul',
+                                          image: Images.mosque,
+                                          radius: 25.r,
+                                        ),
+                                      ],
                                     ),
                                     SizedBox(height: 20.h),
+                                    Row(
+                                      children: [
+                                        Image.asset(Images.awardBadgePrize, scale: 4),
+                                        SizedBox(width: 20.w),
+                                        Expanded(
+                                          child: SizedBox(
+                                            height: 80.h, // ⚠️ مهم جدًا
+                                            child: ListView.separated(
+                                              scrollDirection: Axis.horizontal,
+                                              padding: EdgeInsets.zero,
+                                              itemCount: 5,
+                                              separatorBuilder: (_, i) =>
+                                                  SizedBox(width: 25.w),
+                                              itemBuilder: (_, i) =>
+                                                  CommonAchievements(),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 10.h),
                                   ],
                                 ),
+                                // Column(
+                                //   children: [
+                                //     CustomText(
+                                //       'No common achievements with Mia yet',
+                                //       fontWeight: FontWeight.w600,
+                                //       fontSize: 16.sp,
+                                //     ),
+                                //     SizedBox(height: 8.h),
+                                //     CustomText(
+                                //       'Invite her from your current city to',
+                                //       color: Colors.grey.shade300,
+                                //     ),
+                                //     CustomText(
+                                //       'begin the adventure!',
+                                //       color: Colors.grey.shade300,
+                                //     ),
+                                //     SizedBox(height: 20.h),
+                                //   ],
+                                // ),
                               ],
                             ),
                           ),

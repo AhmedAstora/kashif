@@ -4,8 +4,8 @@ import '../../../../Utilities/Constants/app_color.dart';
 import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
 
-class CustomAdminWidget extends StatelessWidget {
-  const CustomAdminWidget({super.key});
+class AdminNewUserWidget extends StatelessWidget {
+  const AdminNewUserWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class CustomAdminWidget extends StatelessWidget {
             left: -35.w,
             top: 15.h,
             child: CircleAvatar(
-              radius: 40.r,
+              radius: 42.5.r,
               child: Image.asset(Images.addPhoto),
             ),
           ),

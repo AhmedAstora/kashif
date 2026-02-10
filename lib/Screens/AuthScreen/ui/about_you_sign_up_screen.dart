@@ -55,20 +55,68 @@ class AboutYouSignUpScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 30.h),
-                      AboutYouMenuWidget(
-                        selectedItem: controller,
-                        icon: Images.earth,
-                        items: [],
-                        onChange: (T) {},
+                      AboutYouMenuWidget<CountryModel>(
+                        selectedItem: controller.selectedCountry,
+                        hint: 'Select your country',
                         displayText: 'Select your country',
+                        icon: Images.earth,
+                        items: controller.countries
+                            .map(
+                              (country) => DropdownMenuItem<CountryModel>(
+                            value: country,
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 60.w,
+                                ),
+                                Image.asset(
+                                  country.flag,
+                                  width: 24.w,
+                                  height: 16.h,
+                                  fit: BoxFit.cover,
+                                ),
+                                SizedBox(width: 12.w),
+                                CustomText(
+                                  country.name,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                            .toList(),
+                        onChange: (value) {
+                          controller.selectedCountry = value;
+                          controller.update();
+                        },
                       ),
                       SizedBox(height: 15.h),
-                      AboutYouMenuWidget(
-                        selectedItem: controller,
+                      AboutYouMenuWidget<String>(
+                        selectedItem: controller.selectedCity,
                         icon: Images.cityBuildings,
-                        items: [],
-                        onChange: (T) {},
-                        displayText: 'Select your country',
+                        displayText: 'Choose your city',
+                        items: controller.cities
+                            .map(
+                              (city) => DropdownMenuItem<String>(
+                            value: city,
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 60.w,
+                                ),
+                                CustomText(
+                                  city,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                            .toList(),
+                        onChange: (value) {
+                          controller.selectedCity = value;
+                          controller.update();
+                        }, hint: 'Choose your city',
                       ),
                       SizedBox(height: 30.h),
                     ],

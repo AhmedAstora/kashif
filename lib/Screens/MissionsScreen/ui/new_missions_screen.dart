@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/custom_admin_widget.dart';
-import 'package:kashif/Screens/HomeScreen/ui/widget/interest_home_widget.dart';
 import 'package:kashif/Screens/MissionsScreen/ui/widget/complete_all_cairo_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/history_lover_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/location_widget.dart';
 import 'package:kashif/Screens/MissionsScreen/ui/widget/missions_city_widget.dart';
-import 'package:kashif/Screens/MissionsScreen/ui/widget/missions_now_city_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
-
 import '../../../Utilities/Constants/app_color.dart';
 import '../../../Utilities/Constants/image_constant.dart';
-import '../../../Utilities/CustomWidgets/custom_new_button.dart';
 
 class NewMissionsScreen extends StatelessWidget {
   NewMissionsScreen({super.key});

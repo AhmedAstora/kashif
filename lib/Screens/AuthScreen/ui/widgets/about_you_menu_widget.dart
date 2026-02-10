@@ -14,6 +14,7 @@ class AboutYouMenuWidget<T> extends StatelessWidget {
   String icon;
   final void Function(T?)? onChange;
   String displayText;
+  String hint;
   bool isNotString ;
 
   AboutYouMenuWidget({
@@ -21,6 +22,7 @@ class AboutYouMenuWidget<T> extends StatelessWidget {
     this.isLoading = true,
     this.isNotString = true,
     required this.selectedItem,
+    required this.hint,
     required this.items,
     required this.icon,
     required this.onChange,
@@ -67,12 +69,20 @@ class AboutYouMenuWidget<T> extends StatelessWidget {
                   ),
                           ),
                           isExpanded: true,
-                          hint: CustomText(
-                  '',
-                  color: Colors.grey,
+                          hint: Row(
+                            children: [
+                              SizedBox(
+                                width: 60.w,
+                              ),
+                              CustomText(
+                                                '$hint',
+                                                color: Colors.white.withOpacity(.7),
+                              ),
+                            ],
                           ),
                           value: selectedItem,
                           items: items,
+                          dropdownColor: Colors.white.withOpacity(.6),
                           onChanged: onChange,
                         ),
 

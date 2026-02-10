@@ -23,6 +23,7 @@ class AddFriendWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       CircleAvatar(
                         radius: 32.r,
@@ -61,11 +62,13 @@ class AddFriendWidget extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(width: 95.w),
+                      SizedBox(
+                        width: 90.w,
+                      ),
                       GestureDetector(
                         child: changeIcon
-                            ? Image.asset(Images.addButton, scale: 7)
-                            : Image.asset(Images.removeFriends, scale: 4),
+                            ? Image.asset(Images.addButtonFriends,height: 36.h,width: 36.w,)
+                            : Image.asset(Images.removeFriends,height: 36.h,width: 36.w,),
                       ),
                     ],
                   ),
