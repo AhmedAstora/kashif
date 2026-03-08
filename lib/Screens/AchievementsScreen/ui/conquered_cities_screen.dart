@@ -4,6 +4,8 @@ import 'package:flutter_3d_carousel/flutter_3d_carousel.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:kashif/Screens/AchievementsScreen/ui/widget/cities_in_progress_widget.dart';
+import 'package:kashif/Screens/AchievementsScreen/ui/widget/conquered_cities_widget.dart';
+import 'package:kashif/Screens/AchievementsScreen/ui/widget/new_missions_cities_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/widget/flight_slider_widget.dart';
 import 'package:kashif/Screens/ProfileScreen/controller/profile_controller.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/widget/carousel_slider_widget.dart';
@@ -24,8 +26,8 @@ import '../../../Utilities/Constants/image_constant.dart';
 import '../../../Utilities/CustomWidgets/back_arrow_widget.dart';
 import '../../../Utilities/CustomWidgets/custom_new_button.dart';
 
-class CitiesInProgressScreen extends StatelessWidget {
-  CitiesInProgressScreen({super.key});
+class ConqueredCitiesScreen extends StatelessWidget {
+  ConqueredCitiesScreen({super.key});
 
   final controller = Get.put(ProfileController());
   @override
@@ -52,7 +54,7 @@ class CitiesInProgressScreen extends StatelessWidget {
                             BackArrowWidget(),
                             SizedBox(width: 15.w),
                             CustomText(
-                              'Cities in Progress',
+                              'Conquered Cities',
                               fontSize: 20.sp,
                               fontWeight: FontWeight.w500,
                             ),
@@ -62,24 +64,71 @@ class CitiesInProgressScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 27.h,
+                        height: 32.h,
                       ),
-                      CustomText('Keep going! ',
+                      SizedBox(
+                        height: 190.h,
+                        child: ListView.separated(
+                          scrollDirection: Axis.horizontal,
+                          padding: EdgeInsets.zero,
+                          itemCount: 3,
+                          separatorBuilder: (_, i) => SizedBox(width: 11.w),
+                          itemBuilder: (_, i) =>NewMissionsCitiesWidget()
+                        ),
+                      ),
+                      // Center(
+                      //   child: Container(
+                      //     height: 78.h,
+                      //     width: 93.w,
+                      //     decoration: BoxDecoration(
+                      //       color: Color(
+                      //         0xffFE8769,
+                      //       ).withValues(alpha: 0.66),
+                      //       borderRadius: BorderRadius.circular(20.r),
+                      //       boxShadow: [
+                      //         BoxShadow(
+                      //           color: Colors.black.withOpacity(0.25),
+                      //           blurRadius: 4,
+                      //         ),
+                      //       ],
+                      //     ),
+                      //     child: Column(
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: [
+                      //         Image.asset(
+                      //           Images.educationalGameLogo,
+                      //           height: 32.h,
+                      //           width: 32.w,
+                      //         ),
+                      //         SizedBox(height: 5.h),
+                      //         CustomText(
+                      //           '5',
+                      //           fontSize: 18.sp,
+                      //           fontWeight: FontWeight.w500,
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
+                      SizedBox(
+                        height: 18.h,
+                      ),
+                      CustomText('Victory! ',
                           fontSize: 18.sp, fontWeight: FontWeight.w500),
-                      CustomText('You’re on your way to conquering these cities.'),
+                      CustomText('These are the cities you’ve conquered'),
                       SizedBox(
                         height: 19.h,
                       ),
                       SizedBox(
                         height: 1000.h,
                         child: ListView.separated(
-                            scrollDirection: Axis.vertical,
-                            padding: EdgeInsets.zero,
-                            itemCount: 4,
-                            separatorBuilder: (_, i) => SizedBox(height: 14.w),
-                            itemBuilder: (_, i) => CitiesInProgressWidget(),
+                          scrollDirection: Axis.vertical,
+                          padding: EdgeInsets.zero,
+                          itemCount: 4,
+                          separatorBuilder: (_, i) => SizedBox(height: 15.w),
+                          itemBuilder: (_, i) => ConqueredCitiesWidget(),
                         ),),
-                  
+
                     ],
                   ),
                 ),

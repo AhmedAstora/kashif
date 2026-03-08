@@ -75,6 +75,7 @@ class Images {
   static String flagSpain = '$imagePath/flag_spain.png';
   static String fire = '$imagePath/fire.png';
   static String missionsButton = '$imagePath/missions_button.PNG';
+  static String newMissions = '$imagePath/new_missions.png';
   static String locationFilm = '$iconPath/location_film.png';
   static String locationMarker = '$iconPath/location_marker.png';
   static String locationRestaurant = '$iconPath/location_restaurant.png';

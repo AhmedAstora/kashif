@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:kashif/Screens/AchievementsScreen/ui/conquered_cities_screen.dart';
+import 'package:kashif/Screens/AchievementsScreen/ui/widget/conquered_cities_widget.dart';
 import 'package:kashif/Screens/HomeScreen/ui/home_new_user_screen.dart';
 import 'package:kashif/Screens/ProfileScreen/ui/profile_screen.dart';
 import 'Helper/SharedPreferance/shared_preferance.dart';
+import 'Screens/AchievementsScreen/ui/cities_in_progress_screen.dart';
 import 'Screens/HomeScreen/ui/home_screen.dart';
 import 'Utilities/MainData/MainData.dart';
 import 'Utilities/Transalation/Translation.dart';
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         translations: Messages(),
         // supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
         // locale: Locale(SpHelper.spHelper.getLanguage()! == "ar" ? "ar" : "en"),
-        home: ProfileScreen(),
+        home: ConqueredCitiesScreen(),
       ),
     );
   }
