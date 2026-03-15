@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../Utilities/Constants/image_constant.dart';
 import '../../../../Utilities/CustomWidgets/custom_text.dart';
@@ -25,7 +26,7 @@ class LocationWidget extends StatelessWidget {
           cities[index]['image']!,
           scale: 4,
         ),
-        SizedBox(height: 4),
+        SizedBox(height: 4.h),
         CustomText(
           cities[index]['num']!,
         ),

@@ -34,7 +34,14 @@ class AppColor {
       stops: stops ?? [0.1, 0.7],
     );
   }
-
+  static getGradientMap({List<double>? stops, List<Color>? colors}) {
+    return LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: colors ?? [Color(0xff111932), Color(0xff293767)],
+      stops: stops ?? [0.0, 1],
+    );
+  }
   static getBlueGradient({List<double>? stops, List<Color>? colors}) {
     return LinearGradient(
       begin: Alignment.bottomRight,

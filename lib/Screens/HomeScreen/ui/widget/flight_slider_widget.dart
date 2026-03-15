@@ -7,12 +7,14 @@ import 'dart:math' as math;
 class FlightSliderWidget extends StatefulWidget {
   final double circleRadius; // حجم الدائرة (الصورة)
   final double planeSize;    // حجم الطائرة
-  final String imagePath;    // مسار الصورة
+  final String imagePath;   // مسار الصورة
+    double progress ;    // تقدم الطائرة (0.0 إلى 1.0)
 
-  const FlightSliderWidget({
+   FlightSliderWidget({
     Key? key,
     this.circleRadius = 47.0, // القيمة الافتراضية كما في كودك
     this.planeSize = 40.0,    // القيمة الافتراضية كما في كودك
+    this.progress = 0.2,     // القيمة الافتراضية كما في كودك
     required this.imagePath,
   }) : super(key: key);
 
@@ -21,9 +23,9 @@ class FlightSliderWidget extends StatefulWidget {
 }
 
 class _FlightSliderWidgetState extends State<FlightSliderWidget> {
-  double _progress = 0.8;
+   // تقدم الطائرة (0.0 إلى 1.0)
 
-  double get _angle => (_progress * 2 * math.pi) - (math.pi / 2);
+  double get _angle => (widget.progress * 2 * math.pi) - (math.pi / 2);
 
   void _updateProgress(Offset localPosition, Size size) {
     Offset center = Offset(size.width / 2, size.height / 2);
@@ -33,7 +35,7 @@ class _FlightSliderWidgetState extends State<FlightSliderWidget> {
     if (normalizedAngle < 0) normalizedAngle += 2 * math.pi;
 
     setState(() {
-      _progress = (normalizedAngle / (2 * math.pi)).clamp(0.0, 1.0);
+     widget.progress = (normalizedAngle / (2 * math.pi)).clamp(0.0, 1.0);
     });
   }
 
@@ -59,7 +61,7 @@ class _FlightSliderWidgetState extends State<FlightSliderWidget> {
             size: Size(paintSize.r, paintSize.r),
             painter: PlaneSliderPainter(
               angle: _angle,
-              progress: _progress,
+              progress: widget.progress,
               planeSize: widget.planeSize, // تمرير حجم الطائرة للرسام
             ),
           ),
