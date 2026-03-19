@@ -66,6 +66,7 @@ class Images {
   static String locationMap = '$imagePath/location_map.png';
   static String locationMapGreen = '$imagePath/location_map_green.png';
   static String cairo = '$imagePath/cairo.png';
+  static String buttonConqueredCity = '$imagePath/button_conquered_city.png';
   static String removeUser = '$imagePath/remove_user.png';
   static String addFriends = '$imagePath/add_friends.png';
   static String removeFriends = '$imagePath/remove_friends.png';

@@ -26,7 +26,7 @@ class CarouselSliderWidget extends StatelessWidget {
         SizedBox(
           height: 5.h,
         ),
-        StackedOverlapCarousel(
+        CustomStackedCarousel(
 
       ),
     ]

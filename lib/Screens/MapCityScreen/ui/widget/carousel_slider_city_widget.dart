@@ -4,14 +4,14 @@ import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 // استبدل المسار بالمسار الصحيح لديك
 // import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 
-class CustomStackedCarousel extends StatefulWidget {
-  const CustomStackedCarousel({super.key});
+class CarouselSliderCityWidget extends StatefulWidget {
+  const CarouselSliderCityWidget({super.key});
 
   @override
-  State<CustomStackedCarousel> createState() => _CustomStackedCarouselState();
+  State<CarouselSliderCityWidget> createState() => _CarouselSliderCityWidgetState();
 }
 
-class _CustomStackedCarouselState extends State<CustomStackedCarousel> {
+class _CarouselSliderCityWidgetState extends State<CarouselSliderCityWidget> {
   late PageController _pageController;
   double _currentPage = 2.0;
   int? _blurredIndex;
@@ -25,11 +25,11 @@ class _CustomStackedCarouselState extends State<CustomStackedCarousel> {
   ];
 
   final List<String> titles = [
-    "Eiffel Tower",
-    "Times Square",
-    "Pyramids",
-    "Eiffel Tower",
-    "Times Square",
+    "Ahl Masr Walkway",
+    "Ahl Masr Walkway",
+    "Ahl Masr Walkway",
+    "Ahl Masr Walkway",
+    "Ahl Masr Walkway",
   ];
 
   @override
@@ -171,9 +171,9 @@ class _CustomStackedCarouselState extends State<CustomStackedCarousel> {
                     ),
                     alignment: Alignment.center,
                     child: CustomText(
-                        "more shots",
-                          color: Colors.white,
-                          fontSize: 12,
+                      "more shots",
+                      color: Colors.white,
+                      fontSize: 12,
                     ),
                   ),
                 ),
@@ -184,8 +184,8 @@ class _CustomStackedCarouselState extends State<CustomStackedCarousel> {
           opacity: textOpacity,
           child: CustomText(
             titles[index],
-              fontSize: 14,
-              color: Colors.grey.shade400,
+            fontSize: 12,
+            color: Colors.grey.shade200,
           ),
         ),
       ],
