@@ -40,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
           gradient: AppColor.getGradient(stops: [0, 0.7]),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          padding: EdgeInsets.symmetric(horizontal: 24.w) ,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

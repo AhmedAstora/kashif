@@ -7,29 +7,14 @@ import 'package:kashif/Screens/AuthScreen/ui/photo_sign_up_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/sign_up_password_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/sign_up_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/terms_of_use_screen.dart';
-import 'package:kashif/Screens/HomeScreen/ui/home_new_user_screen.dart';
-import '../../../Utilities/Constants/image_constant.dart';
+
+import '../../HomeScreen/ui/home_screen.dart';
 import '../ui/new_password_screen.dart';
 import '../ui/send_code_screen.dart';
 
-class CountryModel {
-  final String name;
-  final String flag;
-
-  CountryModel(this.name, this.flag);
-}
-
 class AuthController extends GetxController{
 
-  CountryModel? selectedCountry;
-  String? selectedCity;
 
-  final countries = [
-    CountryModel('Spain', Images.flagSpain),
-    CountryModel('France', Images.flagSpain),
-    CountryModel('Germany', Images.flagSpain),
-  ];
-  final cities = ['Madrid', 'Barcelona', 'Valencia'];
   var pinPutController = TextEditingController();
   bool forceError = false;
   DateTime endTime = DateTime.now().add(Duration(seconds: 60));
@@ -67,6 +52,8 @@ class AuthController extends GetxController{
   bool isTappedNavigationAboutYouSignUp = false;
   bool isTappedNavigationTermsOfUse = false;
   bool isTappedNavigationHomePage = false;
+
+  bool? get isTappedCheckButton => null;
 
   onTapForgotPassword() {
     isTappedForgotPassword = true;
@@ -131,7 +118,7 @@ class AuthController extends GetxController{
     isTappedNavigationHomePage = true;
 
     update();
-    Get.to(()=>HomeNewUserScreen());
+    Get.to(()=>HomeScreen());
   }
   onTapCheckBox() {
     isTappedCheckBox = true;

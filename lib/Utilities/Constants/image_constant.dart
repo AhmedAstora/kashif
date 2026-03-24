@@ -63,6 +63,8 @@ class Images {
   static String notificationMessage = '$imagePath/notification_message.png';
   static String educationalGameLogo = '$imagePath/educational_game_logo.png';
   static String airPlan = '$imagePath/airplan.png';
+  static String email = '$imagePath/email.png';
+  static String checkEmail = '$imagePath/check_email.png';
   static String locationMap = '$imagePath/location_map.png';
   static String locationMapGreen = '$imagePath/location_map_green.png';
   static String cairo = '$imagePath/cairo.png';

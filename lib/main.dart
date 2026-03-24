@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:kashif/Screens/AchievementsScreen/ui/achievements_screen.dart';
+import 'package:kashif/Screens/AuthScreen/ui/new_password_screen.dart';
+import 'package:kashif/Screens/HomeScreen/ui/home_screen.dart';
+import 'package:kashif/Screens/ProfileScreen/ui/friends_profile_screen.dart';
+import 'package:kashif/Screens/ProfileScreen/ui/missions_shots_screen.dart';
 import 'Helper/SharedPreferance/shared_preferance.dart';
-import 'Screens/AchievementsScreen/ui/xp_history_screen.dart';
-import 'Screens/MapCityScreen/ui/city_screen.dart';
+import 'Screens/AuthScreen/ui/about_you_sign_up_screen.dart';
+import 'Screens/HomeScreen/ui/friends_screen.dart';
+import 'Screens/HomeScreen/ui/notification_screen.dart';
+import 'Screens/MapCityScreen/ui/pyramids_shots_screen.dart';
+import 'Screens/MissionsScreen/ui/missions_new_user_screen.dart';
+import 'Screens/MissionsScreen/ui/new_missions_screen.dart';
+import 'Screens/ProfileScreen/ui/profile_screen.dart';
+import 'Screens/SettingsScreen/ui/settings_screen.dart';
+import 'Screens/SplashScreen/ui/splash_screen.dart';
 import 'Utilities/MainData/MainData.dart';
 import 'Utilities/Transalation/Translation.dart';
 
@@ -33,7 +44,7 @@ class MyApp extends StatelessWidget {
         translations: Messages(),
         // supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
         // locale: Locale(SpHelper.spHelper.getLanguage()! == "ar" ? "ar" : "en"),
-        home: CityScreen(),
+        home: PyramidsShotsScreen(),
       ),
     );
   }

@@ -33,7 +33,6 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24.w),
-              
                     child: Column(
                       children: [
                         SizedBox(height: 60.h),
@@ -94,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                             CustomText("Remember Me", color: Colors.white),
                             SizedBox(width: 60.w),
                             InkWell(
-                              onTap:()=> con.navigationForgotPassword(),
+                              onTap: () => con.navigationForgotPassword(),
                               child: CustomText(
                                 "Forgot Password?",
                                 fontWeight: FontWeight.w600,
@@ -110,9 +109,13 @@ class LoginScreen extends StatelessWidget {
                   CustomNewButtonLogin(
                     title: "Login".toUpperCase(),
                     isTapped: con.isTappedForgotPassword,
-                    onTap:()=> con.onTapForgotPassword(),
+                    onTap: () => con.onTapForgotPassword(),
                   ),
-                  CustomText('or', fontSize: 16.sp, fontWeight: FontWeight.w600),
+                  CustomText(
+                    'or',
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
                   SizedBox(height: 10.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
