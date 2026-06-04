@@ -64,6 +64,13 @@ class Images {
   static String educationalGameLogo = '$imagePath/educational_game_logo.png';
   static String airPlan = '$imagePath/airplan.png';
   static String email = '$imagePath/email.png';
+  static String pyramidsCairo = '$imagePath/pyramids_cairo.png';
+  static String buttonNavBar = '$imagePath/button_nav_bar.png';
+  static String trackNavBar = '$imagePath/track_nav_bar.png';
+  static String personNavBar = '$imagePath/person_nav_bar.png';
+  static String locationNavBar = '$imagePath/location_nav_bar.png';
+  static String homeNavBar = '$imagePath/home_nav_bar.png';
+  static String emojiNavBar = '$imagePath/emoji_nav_bar.png';
   static String checkEmail = '$imagePath/check_email.png';
   static String locationMap = '$imagePath/location_map.png';
   static String locationMapGreen = '$imagePath/location_map_green.png';
@@ -81,10 +88,10 @@ class Images {
   static String fire = '$imagePath/fire.png';
   static String missionsButton = '$imagePath/missions_button.PNG';
   static String newMissions = '$imagePath/new_missions.png';
-  static String locationFilm = '$iconPath/location_film.png';
-  static String locationMarker = '$iconPath/location_marker.png';
-  static String locationRestaurant = '$iconPath/location_restaurant.png';
-  static String locationShop = '$iconPath/location_shop.png';
-  static String locationTrees = '$iconPath/location_trees.png';
-  static String locationBank = '$iconPath/location_bank.png';
+  static String locationFilm = '$imagePath/location_film.png';
+  static String locationMarker = '$imagePath/location_marker.png';
+  static String locationRestaurant = '$imagePath/location_restaurant.png';
+  static String locationShop = '$imagePath/location_shop.png';
+  static String locationTrees = '$imagePath/location_trees.png';
+  static String locationBank = '$imagePath/location_bank.png';
 }

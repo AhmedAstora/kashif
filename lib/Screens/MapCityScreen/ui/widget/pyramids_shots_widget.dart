@@ -61,7 +61,7 @@ class PyramidsShotsWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: 125.w),
+                  Spacer(),
                   Column(
                     children: [
                       CustomText(

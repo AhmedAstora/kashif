@@ -50,7 +50,7 @@ class CompleteAllCairoWidget extends StatelessWidget {
             child: Row(
               children: [
                 SizedBox(
-                  height: 60.h,
+                  height: 70.h,
                   width: 220.w,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,

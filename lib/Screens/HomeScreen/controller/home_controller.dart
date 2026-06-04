@@ -16,12 +16,19 @@ class HomeController extends GetxController{
   bool isTappedNavigationNotification = false;
   bool isTappedNavigationFriendRequests = false;
   bool isTappedNavigationAddFriend = false;
+  var selectedIndex = 2.obs;
+
+
   final TextEditingController searchController = TextEditingController();
   navigationMyFriends() {
     isTappedNavigationMyFriends = true;
 
     update();
     Get.to(()=>MyFriendsScreen());
+  }
+
+  void changeIndex(int index) {
+    selectedIndex.value = index;
   }
   navigationAddFriend() {
     isTappedNavigationAddFriend = true;

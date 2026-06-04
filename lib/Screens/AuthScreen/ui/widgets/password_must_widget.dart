@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kashif/Utilities/CustomWidgets/custom_text.dart';
 
 class PasswordMustWidget extends StatelessWidget {
-  const PasswordMustWidget({super.key});
+  final String text;
+  final bool isDone;
+
+  const PasswordMustWidget({super.key, required this.text, required this.isDone});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Row(
       children: [
-        Row(
-          children: [
-            CircleAvatar(
-              radius: 2.r,
-              backgroundColor: Colors.white,
-            ),
-            SizedBox(
-              width: 8.w,
-            ),
-            CustomText('8 characters',fontSize: 12.sp,)
-          ],
+        Icon(Icons.circle, size: 8.w, color: isDone ? Colors.green : Colors.white),
+        SizedBox(width: 8.w),
+        Text(
+          text,
+          style: TextStyle(
+            color: isDone ? Colors.green : Colors.white, // تغيير اللون للأخضر عند التحقق
+            fontSize: 10.sp,
+          ),
         ),
-
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:kashif/Screens/AuthScreen/ui/widgets/message_password_widget.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_check_box.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_new_botton_login.dart';
 import 'package:kashif/Utilities/CustomWidgets/custom_text_field.dart';
@@ -16,6 +17,7 @@ class NewPasswordScreen extends StatelessWidget {
   NewPasswordScreen({super.key});
 
   final controller = Get.put(AuthController());
+  final FocusNode passwordFocus = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -64,36 +66,65 @@ class NewPasswordScreen extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 36.w),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
+                        // 1. حقل كلمة المرور الجديد
                         CustomTextFieldLogin(
                           icon: Images.lock,
                           hintText: "New Password",
+                          isPassword: true,
                           borderColor: Color(0xff293767),
-                          controller: TextEditingController(),
+                          onChange:  (val) {
+                            con.update();
+                          },
+                          // الربط مع الكنترولر الموجود في AuthController
+                          controller: con.passwordController,
+                          // الربط مع الـ FocusNode للتحكم بظهور الرسالة
+                          focusNode: con.passwordFocusNode,
                           borderWidth: 0,
                           hintColor: Colors.white,
                           fontSize: 12.sp,
                         ),
+
+                        // 2. إظهار رسالة المتطلبات فقط عند التركيز
+                        if (con.isPasswordFocused)
+                          MessagePasswordWidget(con: con,),
+
                         SizedBox(height: 15.h),
+
+                        // 3. حقل تأكيد كلمة المرور
                         CustomTextFieldLogin(
                           icon: Images.confirmLock,
+                          isPassword: true,
                           hintText: "Confirm Password",
                           borderColor: Color(0xff293767),
-                          controller: TextEditingController(),
+                          controller: con.confirmPasswordController,
                           borderWidth: 0,
                           hintColor: Colors.white,
                           fontSize: 12.sp,
                         ),
+
+                        // 4. رسالة التطابق (تظهر فقط عند التطابق)
+                        if (con.passwordsMatch)
+                          Padding(
+                            padding: EdgeInsets.only(right: 15.h),
+                            child: CustomText(
+                                "Passwords match",
+                                color: Colors.green,
+                                fontSize: 12.sp
+                            ),
+                          ),
                         SizedBox(height: 40.h),
                       ],
                     ),
                   ),
+
+// زر التحديث
                   CustomNewButtonLogin(
                     title: "Update Password",
                     isTapped: con.isTappedUpdatePassword,
-                    onTap: ()=>con.onTapUpdatePassword(),
-              
+                    // إضافة شرط لمنع التحديث إذا كانت كلمات المرور غير متطابقة
+                    onTap: () => con.passwordsMatch ? con.onTapUpdatePassword() : null,
                   ),
                 ],
               ),

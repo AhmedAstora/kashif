@@ -22,6 +22,7 @@ class ForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<AuthController>(
+        init: AuthController(),
         builder: (con) {
         return Scaffold(
           body: Container(
@@ -54,14 +55,33 @@ class ForgotPasswordScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 30.h),
-                  CustomTextFieldLogin(
-                    icon: Images.user,
-                    hintText: "Your Email",
-                    borderColor: Color(0xff293767),
-                    controller: TextEditingController(),
-                    borderWidth: 0,
-                    hintColor: Colors.white,
-                    fontSize: 12.sp,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end, // لضمان محاذاة النص لليسار
+                    children: [
+                      CustomTextFieldLogin(
+                        icon: Images.user,
+                        hintText: "Your Email",
+                        borderColor: con.errorMessage != null ? Colors.red : Color(0xff293767), // يتغير اللون للأحمر عند الخطأ
+                        controller: con.emailController,
+                        borderWidth: 0,
+                        hintColor: Colors.white,
+                        fontSize: 12.sp,
+                      ),
+
+                      // هنا مكان الرسالة التي تظهر تحت الحقل
+                      if (con.errorMessage != null)
+                        Padding(
+                          padding: EdgeInsets.only( right: 10.w),
+                          child: Text(
+                            con.errorMessage!, // سيعرض النص المخزن في الـ Controller
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                    ],
                   ),
                   SizedBox(height: 40.h),
                   CustomNewButtonLogin(

@@ -3,12 +3,12 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:kashif/Screens/AuthScreen/ui/forgot_password_screen.dart';
 import 'package:kashif/Screens/AuthScreen/ui/new_password_screen.dart';
 import 'package:kashif/Screens/HomeScreen/ui/home_screen.dart';
-import 'package:kashif/Screens/ProfileScreen/ui/friends_profile_screen.dart';
-import 'package:kashif/Screens/ProfileScreen/ui/missions_shots_screen.dart';
 import 'Helper/SharedPreferance/shared_preferance.dart';
 import 'Screens/AuthScreen/ui/about_you_sign_up_screen.dart';
+import 'Screens/AuthScreen/ui/sign_up_password_screen.dart';
 import 'Screens/HomeScreen/ui/friends_screen.dart';
 import 'Screens/HomeScreen/ui/notification_screen.dart';
 import 'Screens/MapCityScreen/ui/pyramids_shots_screen.dart';
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         translations: Messages(),
         // supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
         // locale: Locale(SpHelper.spHelper.getLanguage()! == "ar" ? "ar" : "en"),
-        home: PyramidsShotsScreen(),
+        home: SignUpPasswordScreen(),
       ),
     );
   }
